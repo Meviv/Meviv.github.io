@@ -24,13 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="Python,Ubuntu" />
 
-<link rel="canonical" href="http://example.com/archives/">
+
+<link rel="canonical" href="http://example.com/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/">
 
 
 
   <title>
-歸檔 |
+ubuntu系统配置python - Python |
 Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,8 +60,19 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">歸檔
+  <h1 itemprop="name headline">ubuntu系统配置python
   </h1>
+  
+<div class="meta">
+  <span class="item" title="創建時間：2022-01-04 13:41:40">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">發表於</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-04T13:41:40+08:00">2022-01-04</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -89,12 +102,12 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
         </ul>
       </div>
     </header>
@@ -115,27 +128,115 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/">首頁</a> <small>/</small>
-          目前共有 1 篇文章。 <small class="cheers">嗯.. 繼續努力。</small>
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首頁</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Python/" itemprop="item" rel="index" title="分類於 Python"><span itemprop="name">Python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
 
-          <h3 class="item section">
-            <a href="/archives/2022">2022 年</a><small>/</small><a href="/archives/2022/01">01 月</a>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-HK">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/">
 
-      
-        <small>( 1 )</small>
-      </h3>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Meviv">
+    <meta itemprop="description" content="春風吹破英雄夢，歲月磨平少年心, 江湖夜雨十年燈">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p><span class="aqua">为 ubuntu 服务器配置 py 环境用于运行代码.</span><br>
+ 所用系统镜像为 Ubuntu20.04</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3.10-dev</span><br><span class="line">sudo apt install python3.10-distutils</span><br><span class="line">sudo apt install python3.10-venv</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+<p>注意</p>
+</div>
+<p>通过此种方法配置的 Python 会缺少 pip 包，<span class="exturl" data-url="aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=">需要 wegt 装载 get-pip.py</span>.<br>
+ 再次运行即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">python3.10 get-pip.py</span><br></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/Python/" rel="tag"><i class="ic i-tag"></i> Python</a>
+          <a href="/tags/Ubuntu/" rel="tag"><i class="ic i-tag"></i> Ubuntu</a>
+      </div>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新於</span>
+    <time title="修改時間：2022-07-04 15:57:55" itemprop="dateModified" datetime="2022-07-04T15:57:55+08:00">2022-07-04</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 打賞</button>
+  <p>請我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Meviv 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Meviv 支付寶">
+        <p>支付寶</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>博主： </strong>Meviv <i class="ic i-at"><em>@</em></i>
+  </li>
+  <li class="link">
+    <strong>文章連結：</strong>
+    <a href="http://example.com/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" title="ubuntu系统配置python">http://example.com/2022/01/04/Python/ubuntu系统配置python/</a>
+  </li>
+  <li class="license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
@@ -143,6 +244,9 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <div class="contents panel pjax" data-title="文章目錄">
       </div>
       <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" rel="bookmark" title="ubuntu系统配置python">ubuntu系统配置python</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="本站概覽">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -228,6 +332,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </ul>
 </div>
 
+
         </div>
         <div class="dimmer"></div>
       </div>
@@ -262,7 +367,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'archives/',
+    path: '2022/01/04/Python/ubuntu系统配置python/',
     favicon: {
       show: "（●´3｀●）復活成功",
       hide: "(´Д｀)瀏覽器崩潰啦"
