@@ -33,7 +33,7 @@
 
   <title>
 ubuntu系统配置python - Python |
-Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
+Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -86,7 +86,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
     </div>
     <ul class="menu">
-      <li class="item title"><a href="/" rel="start">Meviv home</a></li>
+      <li class="item title"><a href="/" rel="start">Meviv Home</a></li>
     </ul>
     <ul class="right">
       <li class="item theme">
@@ -102,12 +102,12 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,15 +153,15 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><span class="aqua">为 ubuntu 服务器配置 py 环境用于运行代码.</span><br>
+    <h1 id="环境配置"><a class="markdownIt-Anchor" href="#环境配置">#</a> 环境配置</h1>
+<p><span class="aqua">为 ubuntu 服务器配置 py 环境用于运行代码.</span><br>
  所用系统镜像为 Ubuntu20.04</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3.10-dev</span><br><span class="line">sudo apt install python3.10-distutils</span><br><span class="line">sudo apt install python3.10-venv</span><br></pre></td></tr></table></figure>
-<div class="note warning">
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>sudo apt install python3.10-dev</pre></td></tr><tr><td data-num="2"></td><td><pre>sudo apt install python3.10-distutils</pre></td></tr><tr><td data-num="3"></td><td><pre>sudo apt install python3.10-venv</pre></td></tr></table></figure><div class="note warning">
 <p>注意</p>
 </div>
 <p>通过此种方法配置的 Python 会缺少 pip 包，<span class="exturl" data-url="aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=">需要 wegt 装载 get-pip.py</span>.<br>
  再次运行即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">python3.10 get-pip.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</pre></td></tr><tr><td data-num="2"></td><td><pre>python3.10 get-pip.py</pre></td></tr></table></figure>
       <div class="tags">
           <a href="/tags/Python/" rel="tag"><i class="ic i-tag"></i> Python</a>
           <a href="/tags/Ubuntu/" rel="tag"><i class="ic i-tag"></i> Ubuntu</a>
@@ -176,7 +176,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新於</span>
-    <time title="修改時間：2022-07-04 16:18:25" itemprop="dateModified" datetime="2022-07-04T16:18:25+08:00">2022-07-04</time>
+    <time title="修改時間：2022-07-04 17:07:08" itemprop="dateModified" datetime="2022-07-04T17:07:08+08:00">2022-07-04</time>
   </span>
 </div>
 
@@ -242,6 +242,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目錄">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text"> 环境配置</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -360,7 +361,7 @@ Meviv home =  = 春風吹破英雄夢，歲月磨平少年心</title>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">Meviv @ Meviv home</span>
+    <span class="author" itemprop="copyrightHolder">Meviv @ Meviv Home</span>
   </div>
   <div class="powered-by">
     基於 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
