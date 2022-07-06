@@ -24,12 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-
-<link rel="canonical" href="http://meviv.github.io/404">
-
+  <meta name="keywords" content="CTF" />
 
 
-  <title>Σ( ° △ °|||)︴404！何も見えない |
+<link rel="canonical" href="http://meviv.github.io/2022/01/16/CTF/ctfworld/">
+
+
+
+  <title>
+攻防世界web区WP - CTF |
 Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -57,8 +60,19 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Σ( ° △ °|||)︴404！何も見えない
+  <h1 itemprop="name headline">攻防世界web区WP
   </h1>
+  
+<div class="meta">
+  <span class="item" title="創建時間：2022-01-16 15:20:17">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">發表於</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-16T15:20:17+08:00">2022-01-16</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -88,12 +102,12 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
         </ul>
       </div>
     </header>
@@ -114,9 +128,175 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="page wrap">
-    <div class="notfound">Σ( ° △ °|||)︴404！何も見えない</div>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首頁</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/CTF/" itemprop="item" rel="index" title="分類於 CTF"><span itemprop="name">CTF</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-HK">
+  <link itemprop="mainEntityOfPage" href="http://meviv.github.io/2022/01/16/CTF/ctfworld/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Meviv">
+    <meta itemprop="description" content="春風吹破英雄夢，歲月磨平少年心, 江湖夜雨十年燈">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>先水几篇文</p>
+<ul>
+<li>
+<p>view_source<br>
+ 题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12<br>
+<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h3x9grids1j30e00bljs6.jpg" alt=""></p>
+</li>
+<li>
+<p>get_post<br>
+ 就是提交 get 请求和 post 请求<br>
+如 123.123.123.123:8080/?a=1<br>
+post 请求建议用 HackBar 提交<br>
+得到 flag</p>
+</li>
+<li>
+<p>robots<br>
+ 访问 robots.txt 文件得到提示</p>
+</li>
+</ul>
+<p>Disallow: f1ag_1s_h3re.php</p>
+<p>再次访问 f1ag_1s_h3re.php 得到 flag</p>
+<ul>
+<li>
+<p>backup<br>
+ 备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak<br>
+ 访问这个文件会自动下载，删掉.bak 打开得到 flag<br>
+ (在 Linux 服务器换源时可备份服务器源)</p>
+</li>
+<li>
+<p>cookie<br>
+ 访问 cookie.php 得到提示<span class="label"> See the http response</span><br>
+ 于是 F12 查看请求头得到 flag<br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg" alt=""></p>
+</li>
+<li>
+<p>disabled_button<br>
+F12 查看源码，然后编辑<br>
+将 disabled 中的 dis 删去，就可以按了<br>
+得到 flag<br>
+<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h3xas8l1lkj31hc0lxjwd.jpg" alt=""></p>
+</li>
+<li>
+<p>weak_auth<br>
+ 登录抓包对 password 进行爆破<br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3xeiw6c0rj30yw0gcn16.jpg" alt=""><br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3xeo5b77rj310p0rin4w.jpg" alt=""><br>
+得到密码 123456<br>
+ 输入后再次登录得到 flag</p>
+</li>
+<li>
+<p>simple_php<br>
+php 中有两种比较符号<br>
+ === 会同时比较字符串的值和类型<br>
+ == 会先将字符串换成相同类型，再作比较，属于弱类型比较<br>
+通过 get 传参绕过验证即可，如 index.php?a=abc&amp;b=1239a<br>
+ 得到 flag</p>
+</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/CTF/" rel="tag"><i class="ic i-tag"></i> CTF</a>
+      </div>
   </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新於</span>
+    <time title="修改時間：2022-07-06 19:25:44" itemprop="dateModified" datetime="2022-07-06T19:25:44+08:00">2022-07-06</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 打賞</button>
+  <p>請我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Meviv 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Meviv 支付寶">
+        <p>支付寶</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>博主： </strong>Meviv <i class="ic i-at"><em>@</em></i>
+  </li>
+  <li class="link">
+    <strong>文章連結：</strong>
+    <a href="http://meviv.github.io/2022/01/16/CTF/ctfworld/" title="攻防世界web区WP">http://meviv.github.io/2022/01/16/CTF/ctfworld/</a>
+  </li>
+  <li class="license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" rel="prev" data-background-image="&#x2F;2022&#x2F;01&#x2F;04&#x2F;Python&#x2F;ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython&#x2F;images&#x2F;1.png" title="ubuntu系统配置python">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Python</span>
+  <h3>ubuntu系统配置python</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/02/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" rel="next" data-background-image="&#x2F;2022&#x2F;02&#x2F;14&#x2F;%E6%9D%82%E8%B0%88&#x2F;%E6%9D%82%E8%A9%A9%E4%B8%80&#x2F;images&#x2F;2.png" title="杂詩一">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂谈</span>
+  <h3>杂詩一</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
 
         </div>
         <div id="sidebar">
@@ -129,6 +309,9 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <div class="contents panel pjax" data-title="文章目錄">
       </div>
       <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/01/16/CTF/ctfworld/" rel="bookmark" title="攻防世界web区WP">攻防世界web区WP</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="本站概覽">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,10 +388,12 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2022/02/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -245,7 +430,7 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '404',
+    path: '2022/01/16/CTF/ctfworld/',
     favicon: {
       show: "（●´3｀●）復活成功",
       hide: "(´Д｀)瀏覽器崩潰啦"
