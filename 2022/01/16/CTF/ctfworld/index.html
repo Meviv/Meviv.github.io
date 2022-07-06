@@ -102,11 +102,11 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
         </ul>
       </div>
@@ -169,12 +169,10 @@ post 请求建议用 HackBar 提交<br>
 </li>
 <li>
 <p>robots<br>
- 访问 robots.txt 文件得到提示</p>
+ 访问 robots.txt 文件得到提示<br>
+<span class="label"> Disallow: f1ag_1s_h3re.php</span><br>
+ 再次访问 f1ag_1s_h3re.php 得到 flag</p>
 </li>
-</ul>
-<p>Disallow: f1ag_1s_h3re.php</p>
-<p>再次访问 f1ag_1s_h3re.php 得到 flag</p>
-<ul>
 <li>
 <p>backup<br>
  备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak<br>
@@ -183,8 +181,9 @@ post 请求建议用 HackBar 提交<br>
 </li>
 <li>
 <p>cookie<br>
- 访问 cookie.php 得到提示<span class="label"> See the http response</span><br>
- 于是 F12 查看请求头得到 flag<br>
+ 访问 cookie.php 得到提示<br>
+<span class="label"> See the http response</span><br>
+ 于是 F12 查看消息头得到 flag<br>
 <img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg" alt=""></p>
 </li>
 <li>
@@ -225,7 +224,7 @@ php 中有两种比较符号<br>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新於</span>
-    <time title="修改時間：2022-07-06 19:25:44" itemprop="dateModified" datetime="2022-07-06T19:25:44+08:00">2022-07-06</time>
+    <time title="修改時間：2022-07-06 20:07:33" itemprop="dateModified" datetime="2022-07-06T20:07:33+08:00">2022-07-06</time>
   </span>
 </div>
 
