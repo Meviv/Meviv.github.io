@@ -24,13 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="渗透" />
 
-<link rel="canonical" href="http://meviv.github.io/archives/">
+
+<link rel="canonical" href="http://meviv.github.io/2022/07/07/dedecms01/">
 
 
 
   <title>
-歸檔 |
+织梦系统渗透测试 - 渗透 |
 Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,8 +60,19 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">歸檔
+  <h1 itemprop="name headline">织梦系统渗透测试
   </h1>
+  
+<div class="meta">
+  <span class="item" title="創建時間：2022-07-07 19:41:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">發表於</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-07-07T19:41:29+08:00">2022-07-07</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -89,12 +102,12 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -115,52 +128,148 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/">首頁</a> <small>/</small>
-          目前共有 5 篇文章。 <small class="cheers">嗯.. 繼續努力。</small>
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首頁</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="item" rel="index" title="分類於 渗透"><span itemprop="name">渗透</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
 
-          <h3 class="item section">
-            <a href="/archives/2022">2022 年</a><small>/</small><a href="/archives/2022/07">07 月</a>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-HK">
+  <link itemprop="mainEntityOfPage" href="http://meviv.github.io/2022/07/07/dedecms01/">
 
-      
-              <small>( 1 )</small>
-            </h3>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Meviv">
+    <meta itemprop="description" content="春風吹破英雄夢，歲月磨平少年心, 江湖夜雨十年燈">
+  </span>
 
-          <h3 class="item section">
-            <a href="/archives/2022">2022 年</a><small>/</small><a href="/archives/2022/02">02 月</a>
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="">
+  </span>
 
-      
+  <div class="body md" itemprop="articleBody">
+    
 
-      
-              <small>( 2 )</small>
-            </h3>
+    <h2 id="工具"><a class="markdownIt-Anchor" href="#工具">#</a> 工具</h2>
+<p>Burpsuite</p>
+<h2 id="过程"><a class="markdownIt-Anchor" href="#过程">#</a> 过程</h2>
+<p>开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权<br>
+于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值<br>
+发包后直接返回了登录页面<br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2hx5wxj31hc0u044w.jpg" alt=""><br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2u7qszj30ra0bodhb.jpg" alt=""><br>
+就知道没这么简单<br>
+再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密<br>
+尝试了 b64 和一些加密方式后再进行 md5，还是没法对应<br>
+这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了<br>
+<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn4319ckj30r205g0t6.jpg" alt=""><br>
+于是注册一个用户名为 1 的账户<br>
+<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h3yn4ubfxcj30cg04dglq.jpg" alt=""><br>
+注册失败了，用户名不够长，那就注册一个 00001 进行尝试<br>
+<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h3yn5hmnsgj31hc0u07bj.jpg" alt=""><br>
+登录抓包，用 vid 替换 userid 的值，vid_ckMd5 替换 userid_ckMd5 的值<br>
+成功登录管理员账户<br>
+<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h3yn5somwzj30qq0fv767.jpg" alt=""><br>
+ F12 查看 cookie，修改 DedeUserID 和 DedeUserID__ckMd5 的值，与 vid 对应<br>
+<img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h3yn6ha50sj30r30a7myf.jpg" alt=""><br>
+返回网站首页，这时登录页面也变成了管理员账户，完成了越权</p>
 
-          <h3 class="item section">
-            <a href="/archives/2022">2022 年</a><small>/</small><a href="/archives/2022/01">01 月</a>
-
-      
-
-      
-        <small>( 2 )</small>
-      </h3>
+      <div class="tags">
+          <a href="/tags/%E6%B8%97%E9%80%8F/" rel="tag"><i class="ic i-tag"></i> 渗透</a>
+      </div>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新於</span>
+    <time title="修改時間：2022-07-07 20:39:28" itemprop="dateModified" datetime="2022-07-07T20:39:28+08:00">2022-07-07</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 打賞</button>
+  <p>請我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Meviv 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Meviv 支付寶">
+        <p>支付寶</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>博主： </strong>Meviv <i class="ic i-at"><em>@</em></i>
+  </li>
+  <li class="link">
+    <strong>文章連結：</strong>
+    <a href="http://meviv.github.io/2022/07/07/dedecms01/" title="织梦系统渗透测试">http://meviv.github.io/2022/07/07/dedecms01/</a>
+  </li>
+  <li class="license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/02/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" rel="prev" data-background-image="&#x2F;images&#x2F;3.png" title="雜詩二">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂谈</span>
+  <h3>雜詩二</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目錄">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text"> 工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 过程</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/07/07/dedecms01/" rel="bookmark" title="织梦系统渗透测试">织梦系统渗透测试</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="本站概覽">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -246,6 +355,7 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </ul>
 </div>
 
+
         </div>
         <div class="dimmer"></div>
       </div>
@@ -276,7 +386,7 @@ Meviv Home =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'archives/',
+    path: '2022/07/07/dedecms01/',
     favicon: {
       show: "（●´3｀●）復活成功",
       hide: "(´Д｀)瀏覽器崩潰啦"
