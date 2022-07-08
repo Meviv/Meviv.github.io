@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
         </ul>
       </div>
     </header>
@@ -121,116 +121,152 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/07/07/dedecms01/" itemprop="url" title="织梦系统渗透测试"><img data-src="https://tva3.sinaimg.cn/mw690/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></a>
+    <a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" title="织梦系统渗透测试贰"><img data-src="/images/6.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="創建時間：2022-07-07 19:41:29">
+  <span class="item" title="創建時間：2022-07-08 12:34:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-07-07T19:41:29+08:00">2022-07-07</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-07-08T12:34:00+08:00">2022-07-08</time>
   </span>
 </div>
 
-    <h3><a href="/2022/07/07/dedecms01/" itemprop="url" title="织梦系统渗透测试">织梦系统渗透测试</a></h3>
+    <h3><a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></h3>
     <div class="excerpt">
-        # 工具
-Burpsuite
-# 过程
-开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权
-于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值
-发包后直接返回了登录页面
-
-就知道没这么简单
-再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密
-尝试了 b64 和一些加密方式后再进行 md5，还是没法对应
-这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了
-
-于是注册一个用户名为 1...
+        工具Burpsuite
+过程前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试想要登录网站后台光靠cookie是不行的，得有正经的密码原来的思路是修改密码时抓包但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置通过几次抓包都没有有用信息，Forward后就返回了，得设置个安全问题才能继续，最后用无安全问题进入重置抓包,发到repeater修改id&amp;#x3D;1,userid&amp;#x3D;admin,safequestion&amp;#x3D;0.0,发包得到一个网址，将uploads改为网站ip访问失败，再次观察网址发现get请求有错，得把两个amp;...
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url" title="渗透"><i class="ic i-flag"></i>渗透</a>
       </span>
     </div>
-    <a href="/2022/07/07/dedecms01/" itemprop="url" title="织梦系统渗透测试" class="btn">more...</a>
+    <a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" title="织梦系统渗透测试贰" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/02/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二"><img data-src="/images/3.png"></a>
+    <a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" itemprop="url" title="织梦系统渗透测试壹"><img data-src="/images/5.png"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="創建時間：2022-02-20 16:30:00">
+  <span class="item" title="創建時間：2022-07-06 19:41:29">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-02-20T16:30:00+08:00">2022-02-20</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-07-06T19:41:29+08:00">2022-07-06</time>
   </span>
 </div>
 
-    <h3><a href="/2022/02/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二">雜詩二</a></h3>
+    <h3><a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" itemprop="url" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></h3>
     <div class="excerpt">
-        纵使相逢应不识，尘满面，鬓如霜.
-苏轼《江城子》
-此去经年，应是良辰好景虚设.
-便纵有千种风情，更与何人说？
-柳永《雨霖铃》
-春日宴，绿酒一杯歌一遍.
-一愿郎君千岁，
-二愿妾身常健.
-三愿如同梁上燕，
-岁岁长相见
-冯延巳《长命女》
-而今识尽愁滋味，欲说还休.
-欲说还休，却道天凉好个秋.
-辛弃疾《丑奴儿》
-从别后，忆相逢，几回魂梦与君同.
-晏几道《鹧鸪天》
-还君明珠双泪垂，恨不相逢未嫁时.
-张籍《节妇吟寄东平李司空师道》
-白发渔樵江渚上，惯看秋月春风.
-一壶浊酒喜相逢.
-古今多少事，都付笑谈中.
-杨慎《临江仙》
-国家养士一百五十年，
-仗节死义，正在今日.
-杨慎
-曾经沧海难为水，除却巫山不是云.
-...
+        工具Burpsuite
+过程开始注册了一个ID为viv的账号，在登录时想要通过抓包修改userid来实现越权于是我修改了userid为1，并且修改了userid的md5加密值发包后直接返回了登录页面就知道没这么简单再次抓包，发现这个账号userid的md5值与md5的直接加密值不一样，猜测还有一次加密尝试了b64和一些加密方式后再进行md5，还是没法对应这时发现访问个人空间时会基于id生成对应的ckMd5值，想到如果用户名为1时，就直接有了对应的ckMd5值了于是注册一个用户名为1的账户注册失败了，用户名不够长，那就注册一个00001进行尝试登录抓包，用vid替换userid的值，vid_ck...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url" title="渗透"><i class="ic i-flag"></i>渗透</a>
+      </span>
+    </div>
+    <a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" itemprop="url" title="织梦系统渗透测试壹" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二"><img data-src="/images/3.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="創建時間：2022-06-20 16:30:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-06-20T16:30:00+08:00">2022-06-20</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二">雜詩二</a></h3>
+    <div class="excerpt">
+        纵使相逢应不识,尘满面,鬓如霜. 苏轼《江城子》
+此去经年,应是良辰好景虚设.便纵有千种风情,更与何人说? 柳永《雨霖铃》
+春日宴,绿酒一杯歌一遍.一愿郎君千岁,二愿妾身常健.三愿如同梁上燕,岁岁长相见 冯延巳《长命女》
+而今识尽愁滋味,欲说还休.欲说还休,却道天凉好个秋. 辛弃疾《丑奴儿》
+从别后,忆相逢,几回魂梦与君同. 晏几道《鹧鸪天》
+还君明珠双泪垂,恨不相逢未嫁时.张籍《节妇吟寄东平李司空师道》
+白发渔樵江渚上,惯看秋月春风.一壶浊酒喜相逢.古今多少事,都付笑谈中. 杨慎《临江仙》
+国家养士一百五十年，仗节死义，正在今日. 杨慎
+曾经沧海难为水,除却巫山不是云....
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/Miscellaneous-talk/" itemprop="url" title="杂谈"><i class="ic i-flag"></i>杂谈</a>
       </span>
     </div>
-    <a href="/2022/02/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二" class="btn">more...</a>
+    <a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/02/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一"><img data-src="/images/2.png"></a>
+    <a href="/2022/06/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP"><img data-src="/images/4.png"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="創建時間：2022-02-14 22:44:00">
+  <span class="item" title="創建時間：2022-06-16 15:20:17">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-02-14T22:44:00+08:00">2022-02-14</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-06-16T15:20:17+08:00">2022-06-16</time>
   </span>
 </div>
 
-    <h3><a href="/2022/02/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一">杂詩一</a></h3>
+    <h3><a href="/2022/06/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP">攻防世界web区WP</a></h3>
+    <div class="excerpt">
+        先水几篇文
+
+view_source题目提示鼠标右键无法使用， Ctrl+U显示源码，或直接F12
+
+get_post就是提交get请求和post请求如123.123.123.123:8080&amp;#x2F;?a&amp;#x3D;1post请求建议用HackBar提交得到flag
+
+robots访问robots.txt文件得到提示[Disallow:...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/CTF/" itemprop="url" title="CTF"><i class="ic i-flag"></i>CTF</a>
+      </span>
+    </div>
+    <a href="/2022/06/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一"><img data-src="/images/2.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="創建時間：2022-06-14 22:44:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-06-14T22:44:00+08:00">2022-06-14</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一">杂詩一</a></h3>
     <div class="excerpt">
         我是温柔的春雨，滋润着西部荒野的麦田.
 我是清幽的黎明，弥漫在荆棘谷的林间.
@@ -245,91 +281,44 @@ Burpsuite
         <a href="/categories/Miscellaneous-talk/" itemprop="url" title="杂谈"><i class="ic i-flag"></i>杂谈</a>
       </span>
     </div>
-    <a href="/2022/02/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一" class="btn">more...</a>
+    <a href="/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/01/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP"><img data-src="/images/4.png"></a>
+    <a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python"><img data-src="/images/1.png"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="創建時間：2022-01-16 15:20:17">
+  <span class="item" title="創建時間：2022-06-04 13:41:40">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-01-16T15:20:17+08:00">2022-01-16</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-06-04T13:41:40+08:00">2022-06-04</time>
   </span>
 </div>
 
-    <h3><a href="/2022/01/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP">攻防世界web区WP</a></h3>
+    <h3><a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python">ubuntu系统配置python</a></h3>
     <div class="excerpt">
-        先水几篇文
+        环境配置[为ubuntu服务器配置py环境用于运行代码.]{.aqua}所用系统镜像为Ubuntu20.04
+sudo apt install python3.10-dev
+sudo apt install python3.10-distutils
+sudo apt install python3.10-venv
 
-view_source
-题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12
-
-get_post
-就是提交 get 请求和 post 请求
-如 123.123.123.123:8080/?a=1
-post 请求建议用 HackBar 提交
-得到 flag
-
-robots
-访问 robots.txt 文件得到提示
-Disallow: f1ag_1s_h3re.php
-再次访问 f1ag_1s_h3re.php 得到 flag
-
-backup
-备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak
-访问这个文件会自动下载，删掉.bak...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/CTF/" itemprop="url" title="CTF"><i class="ic i-flag"></i>CTF</a>
-      </span>
-    </div>
-    <a href="/2022/01/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python"><img data-src="/images/1.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="創建時間：2022-01-04 13:41:40">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-01-04T13:41:40+08:00">2022-01-04</time>
-  </span>
-</div>
-
-    <h3><a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python">ubuntu系统配置python</a></h3>
-    <div class="excerpt">
-        # 环境配置
-为 ubuntu 服务器配置 py 环境用于运行代码.
-所用系统镜像为 Ubuntu20.04
-sudo apt install python3.10-devsudo apt install python3.10-distutilssudo apt install python3.10-venv
-注意
-
-通过此种方法配置的 Python 会缺少 pip 包，需要 wegt 装载 get-pip.py.
-再次运行即可
-wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.pypython3.10...
+:::warning注意:::
+通过此种方法配置的Python会缺少pip包，需要wegt装载get-pip.py.再次运行即可
+wget https://bootstrap.pypa.io/get-pip.py
+python3.10 get-pip.py
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/Python/" itemprop="url" title="Python"><i class="ic i-flag"></i>Python</a>
       </span>
     </div>
-    <a href="/2022/01/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python" class="btn">more...</a>
+    <a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python" class="btn">more...</a>
   </div>
 </article>
 
@@ -363,7 +352,7 @@ wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.pypython3.10..
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">5</span>
+        <span class="count">6</span>
         <span class="name">文章</span>
       </a>
     </div>
