@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9m2c433j31hc0u0n97.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -136,8 +136,23 @@
 
     <h3><a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></h3>
     <div class="excerpt">
-        工具Burpsuite
-过程前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试想要登录网站后台光靠cookie是不行的，得有正经的密码原来的思路是修改密码时抓包但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置通过几次抓包都没有有用信息，Forward后就返回了，得设置个安全问题才能继续，最后用无安全问题进入重置抓包,发到repeater修改id&amp;#x3D;1,userid&amp;#x3D;admin,safequestion&amp;#x3D;0.0,发包得到一个网址，将uploads改为网站ip访问失败，再次观察网址发现get请求有错，得把两个amp;...
+        # 工具
+Burpsuite
+# 过程
+前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试
+想要登录网站后台光靠 cookie 是不行的，得有正经的密码
+原来的思路是修改密码时抓包
+但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置
+通过几次抓包都没有有用信息，Forward 后就返回了，
+得设置个安全问题才能继续，最后用无安全问题进入重置
+
+抓包，发到 repeater
+
+修改 id=1,userid=admin,safequestion=0.0, 发包
+
+得到一个网址，将 uploads 改为网站 ip
+
+访问失败，再次观察网址发现 get 请求有错，得把两个...
     </div>
     <div class="meta footer">
       <span>
@@ -303,15 +318,15 @@ robots访问robots.txt文件得到提示[Disallow:...
 
     <h3><a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python">ubuntu系统配置python</a></h3>
     <div class="excerpt">
-        环境配置[为ubuntu服务器配置py环境用于运行代码.]{.aqua}所用系统镜像为Ubuntu20.04
-sudo apt install python3.10-dev
-sudo apt install python3.10-distutils
-sudo apt install python3.10-venv
+        # 环境配置
+为 ubuntu 服务器配置 py 环境用于运行代码.
+所用系统镜像为 Ubuntu20.04
+sudo apt install python3.10-devsudo apt install python3.10-distutilssudo apt install python3.10-venv
+注意
 
-:::warning注意:::
-通过此种方法配置的Python会缺少pip包，需要wegt装载get-pip.py.再次运行即可
-wget https://bootstrap.pypa.io/get-pip.py
-python3.10 get-pip.py
+通过此种方法配置的 Python 会缺少 pip 包，需要 wegt 装载 get-pip.py.
+再次运行即可
+wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.pypython3.10...
     </div>
     <div class="meta footer">
       <span>
