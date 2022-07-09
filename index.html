@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9rtqvmbj31hc0u0ak1.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9levravj31320n6aiv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9mk6d6qj30u00fkwg2.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9nl9r2ij31hc0u042p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9pwjpdij31hc0u0k2w.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9nvrx2ej31980qsq93.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007dFS7lly8h3v9oa2dz4j30zk0k041k.jpg"></li>
         </ul>
       </div>
     </header>
@@ -136,23 +136,8 @@
 
     <h3><a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></h3>
     <div class="excerpt">
-        # 工具
-Burpsuite
-# 过程
-前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试
-想要登录网站后台光靠 cookie 是不行的，得有正经的密码
-原来的思路是修改密码时抓包
-但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置
-通过几次抓包都没有有用信息，Forward 后就返回了，
-得设置个安全问题才能继续，最后用无安全问题进入重置
-
-抓包，发到 repeater
-
-修改 id=1,userid=admin,safequestion=0.0, 发包
-
-得到一个网址，将 uploads 改为网站 ip
-
-访问失败，再次观察网址发现 get 请求有错，得把两个...
+        <p>登录后台管理系统</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -181,8 +166,8 @@ Burpsuite
 
     <h3><a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" itemprop="url" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></h3>
     <div class="excerpt">
-        工具Burpsuite
-过程开始注册了一个ID为viv的账号，在登录时想要通过抓包修改userid来实现越权于是我修改了userid为1，并且修改了userid的md5加密值发包后直接返回了登录页面就知道没这么简单再次抓包，发现这个账号userid的md5值与md5的直接加密值不一样，猜测还有一次加密尝试了b64和一些加密方式后再进行md5，还是没法对应这时发现访问个人空间时会基于id生成对应的ckMd5值，想到如果用户名为1时，就直接有了对应的ckMd5值了于是注册一个用户名为1的账户注册失败了，用户名不够长，那就注册一个00001进行尝试登录抓包，用vid替换userid的值，vid_ck...
+        <p>获得管理账户</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -211,15 +196,8 @@ Burpsuite
 
     <h3><a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" title="雜詩二">雜詩二</a></h3>
     <div class="excerpt">
-        纵使相逢应不识,尘满面,鬓如霜. 苏轼《江城子》
-此去经年,应是良辰好景虚设.便纵有千种风情,更与何人说? 柳永《雨霖铃》
-春日宴,绿酒一杯歌一遍.一愿郎君千岁,二愿妾身常健.三愿如同梁上燕,岁岁长相见 冯延巳《长命女》
-而今识尽愁滋味,欲说还休.欲说还休,却道天凉好个秋. 辛弃疾《丑奴儿》
-从别后,忆相逢,几回魂梦与君同. 晏几道《鹧鸪天》
-还君明珠双泪垂,恨不相逢未嫁时.张籍《节妇吟寄东平李司空师道》
-白发渔樵江渚上,惯看秋月春风.一壶浊酒喜相逢.古今多少事,都付笑谈中. 杨慎《临江仙》
-国家养士一百五十年，仗节死义，正在今日. 杨慎
-曾经沧海难为水,除却巫山不是云....
+        <p>雜詩</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -248,13 +226,8 @@ Burpsuite
 
     <h3><a href="/2022/06/16/CTF/ctfworld/" itemprop="url" title="攻防世界web区WP">攻防世界web区WP</a></h3>
     <div class="excerpt">
-        先水几篇文
-
-view_source题目提示鼠标右键无法使用， Ctrl+U显示源码，或直接F12
-
-get_post就是提交get请求和post请求如123.123.123.123:8080&amp;#x2F;?a&amp;#x3D;1post请求建议用HackBar提交得到flag
-
-robots访问robots.txt文件得到提示[Disallow:...
+        <p>水文</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -283,13 +256,8 @@ robots访问robots.txt文件得到提示[Disallow:...
 
     <h3><a href="/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/" itemprop="url" title="杂詩一">杂詩一</a></h3>
     <div class="excerpt">
-        我是温柔的春雨，滋润着西部荒野的麦田.
-我是清幽的黎明，弥漫在荆棘谷的林间.
-我是雄浑的鼓声，飞跃纳格兰的云端.
-我是温暖的群星，点缀达纳苏斯的夜晚.
-我是高歌的飞鸟，留存于美好的人间.
-不要在我的墓碑前哭泣，
-我不在那里，我从未长眠.
+        <p>雜詩</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -318,15 +286,8 @@ robots访问robots.txt文件得到提示[Disallow:...
 
     <h3><a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" title="ubuntu系统配置python">ubuntu系统配置python</a></h3>
     <div class="excerpt">
-        # 环境配置
-为 ubuntu 服务器配置 py 环境用于运行代码.
-所用系统镜像为 Ubuntu20.04
-sudo apt install python3.10-devsudo apt install python3.10-distutilssudo apt install python3.10-venv
-注意
-
-通过此种方法配置的 Python 会缺少 pip 包，需要 wegt 装载 get-pip.py.
-再次运行即可
-wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.pypython3.10...
+        <p>为 ubuntu 服务器配置 py 环境用于运行代码.</p>
+      
     </div>
     <div class="meta footer">
       <span>
@@ -361,7 +322,7 @@ wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.pypython3.10..
   <img class="image" itemprop="image" alt="Meviv"
       data-src="//cdn.jsdelivr.net/gh/meviv/meviv.github.io@master/images/avatar.jpg">
   <p class="name" itemprop="name">Meviv</p>
-  <div class="description" itemprop="description">江湖夜雨十年燈</div>
+  <div class="description" itemprop="description">夜深忽夢少年事</div>
 </div>
 
 <nav class="state">
