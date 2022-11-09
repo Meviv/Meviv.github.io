@@ -1,0 +1,29 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "null • All posts by \"python\" category",
+    "description": "夜深忽夢少年事",
+    "home_page_url": "http://meviv.github.io",
+    "items": [
+        {
+            "id": "http://meviv.github.io/2022/07/30/qinlong/",
+            "url": "http://meviv.github.io/2022/07/30/qinlong/",
+            "title": "搭建青龙面板实现脚本可视化管理",
+            "date_published": "2022-07-30T10:25:53.000Z",
+            "content_html": "<p>水</p>\n<span id=\"more\"></span>\n<h1 id=\"安装docker\"><a class=\"markdownIt-Anchor\" href=\"#安装docker\">#</a> 安装 docker</h1>\n<p>服务器系统镜像为 Ubuntu20.04<br>\n 卸载旧版本 docker</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>sudo apt-get remove docker docker-engine docker.io containerd runc</pre></td></tr></table></figure><p>使用 Docker 仓库进行安装</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>sudo apt-get update</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>sudo apt-get install \\</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>    apt-transport-https \\</pre></td></tr><tr><td data-num=\"4\"></td><td><pre>    ca-certificates \\</pre></td></tr><tr><td data-num=\"5\"></td><td><pre>    curl \\</pre></td></tr><tr><td data-num=\"6\"></td><td><pre>    gnupg-agent \\</pre></td></tr><tr><td data-num=\"7\"></td><td><pre>    software-properties-common</pre></td></tr><tr><td data-num=\"8\"></td><td><pre>curl -fsSL https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;docker-ce&#x2F;linux&#x2F;ubuntu&#x2F;gpg | sudo apt-key add -</pre></td></tr></table></figure><p>该方法仅供参考</p>\n<h1 id=\"拉取仓库\"><a class=\"markdownIt-Anchor\" href=\"#拉取仓库\">#</a> 拉取仓库</h1>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>docker run -dit \\</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>-v $PWD&#x2F;ql&#x2F;config:&#x2F;ql&#x2F;config \\</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>-v $PWD&#x2F;ql&#x2F;log:&#x2F;ql&#x2F;log \\</pre></td></tr><tr><td data-num=\"4\"></td><td><pre>-v $PWD&#x2F;ql&#x2F;scripts:&#x2F;ql&#x2F;scripts \\</pre></td></tr><tr><td data-num=\"5\"></td><td><pre>-v $PWD&#x2F;ql&#x2F;db:&#x2F;ql&#x2F;db \\</pre></td></tr><tr><td data-num=\"6\"></td><td><pre>--name qinglong \\</pre></td></tr><tr><td data-num=\"7\"></td><td><pre>--hostname qinglong \\</pre></td></tr><tr><td data-num=\"8\"></td><td><pre>--restart always \\</pre></td></tr><tr><td data-num=\"9\"></td><td><pre>-p 5700:5700 \\</pre></td></tr><tr><td data-num=\"10\"></td><td><pre>whyour&#x2F;qinglong:latest</pre></td></tr></table></figure><p>拉取后在服务器管理台开放对应端口，访问服务器公网 ip: 端口完成部署<br>\n如果需要部署多个容器需修改映射端口及容器名，如:</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>docker run -dit \\</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>-v $PWD&#x2F;ql2&#x2F;config:&#x2F;ql&#x2F;config \\</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>-v $PWD&#x2F;ql2&#x2F;log:&#x2F;ql&#x2F;log \\</pre></td></tr><tr><td data-num=\"4\"></td><td><pre>-v $PWD&#x2F;ql2&#x2F;scripts:&#x2F;ql&#x2F;scripts \\</pre></td></tr><tr><td data-num=\"5\"></td><td><pre>-v $PWD&#x2F;ql2&#x2F;db:&#x2F;ql&#x2F;db \\</pre></td></tr><tr><td data-num=\"6\"></td><td><pre>--name qinglong2 \\</pre></td></tr><tr><td data-num=\"7\"></td><td><pre>--hostname qinglong2 \\</pre></td></tr><tr><td data-num=\"8\"></td><td><pre>--restart always \\</pre></td></tr><tr><td data-num=\"9\"></td><td><pre>-p 5701:5700 \\</pre></td></tr><tr><td data-num=\"10\"></td><td><pre>whyour&#x2F;qinglong:latest</pre></td></tr></table></figure>",
+            "tags": [
+                "Ubuntu"
+            ]
+        },
+        {
+            "id": "http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/",
+            "url": "http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/",
+            "title": "ubuntu系统配置python",
+            "date_published": "2022-06-04T05:41:40.000Z",
+            "content_html": "<p>为 ubuntu 服务器配置 py 环境用于运行代码.</p>\n<span id=\"more\"></span>\n<h1 id=\"环境配置\"><a class=\"markdownIt-Anchor\" href=\"#环境配置\">#</a> 环境配置</h1>\n<p>为 ubuntu 服务器配置 py 环境用于运行代码.<br>\n 所用系统镜像为 Ubuntu20.04</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>sudo apt install python3.10-dev</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>sudo apt install python3.10-distutils</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>sudo apt install python3.10-venv</pre></td></tr></table></figure><div class=\"note warning\">\n<p>注意</p>\n</div>\n<p>通过此种方法配置的 Python 会缺少 pip 包，<span class=\"exturl\" data-url=\"aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=\">需要 wegt 装载 get-pip.py</span>.<br>\n 再次运行即可</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>python3.10 get-pip.py</pre></td></tr></table></figure>",
+            "tags": [
+                "Python",
+                "Ubuntu"
+            ]
+        }
+    ]
+}

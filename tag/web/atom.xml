@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://meviv.github.io</id>
+    <title> • Posts by &#34;web&#34; tag</title>
+    <link href="http://meviv.github.io" />
+    <updated>2022-07-08T04:34:00.000Z</updated>
+    <category term="Python" />
+    <category term="Ubuntu" />
+    <category term="诗" />
+    <category term="CTF" />
+    <category term="渗透" />
+    <category term="杂谈" />
+    <category term="Java" />
+    <category term="Web" />
+    <entry>
+        <id>http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/</id>
+        <title>织梦系统渗透测试贰</title>
+        <link rel="alternate" href="http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/"/>
+        <content type="html">&lt;p&gt;登录后台管理系统&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
+&lt;p&gt;Burpsuite&lt;/p&gt;
+&lt;h1 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h1&gt;
+&lt;p&gt;前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试&lt;br&gt;
+想要登录网站后台光靠 cookie 是不行的，得有正经的密码&lt;br&gt;
+原来的思路是修改密码时抓包&lt;br&gt;
+但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置&lt;br&gt;
+通过几次抓包都没有有用信息，Forward 后就返回了，&lt;br&gt;
+得设置个安全问题才能继续，最后用无安全问题进入重置&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3zouozcfaj30r10b4gmx.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+抓包，发到 repeater&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zovqgw1nj31hc0u0gr0.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 修改 id=1,userid=admin,safequestion=0.0, 发包&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zoyhj47aj31hc0u0tho.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+得到一个网址，将 uploads 改为网站 ip&lt;br&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zp0e2yq3j30cp04v74d.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 访问失败，再次观察网址发现 get 请求有错，得把两个 amp; 删掉&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zp3klke8j30qr0aj75f.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zp413dpkj30ck04h74d.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+成功进入并且修改管理账号密码&lt;br&gt;
+吊诡的是虽然显示修改成功但实际上密码还是错误 (为此我反复抓包修改搞了两个多小时)&lt;br&gt;
+ 最后发现退出 admin 后 cookie 就删了，得保持 admin 账号登录的情况下新建标签页重置密码&lt;br&gt;
+&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3zpvj0ytlj31hc0u0q95.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+再次抓包发到 repeater 并修改密码，修改后直接进入会员中心 - 系统设置&lt;br&gt;
+使用刚刚修改的密码重设&lt;br&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zq7pskmkj30qq0mq40p.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zq8gxr59j30cj04q0st.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+打开 dede，登录网站后台管理系统&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zqmlkh9dj30cm04omxa.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+成功进入网站后台&lt;/p&gt;
+</content>
+        <category term="渗透" />
+        <category term="Web" />
+        <updated>2022-07-08T04:34:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/</id>
+        <title>织梦系统渗透测试壹</title>
+        <link rel="alternate" href="http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/"/>
+        <content type="html">&lt;p&gt;获得管理账户&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h2&gt;
+&lt;p&gt;Burpsuite&lt;/p&gt;
+&lt;h2 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;p&gt;开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权&lt;br&gt;
+于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值&lt;br&gt;
+发包后直接返回了登录页面&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2hx5wxj31hc0u044w.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2u7qszj30ra0bodhb.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+就知道没这么简单&lt;br&gt;
+再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密&lt;br&gt;
+尝试了 b64 和一些加密方式后再进行 md5，还是没法对应&lt;br&gt;
+这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn4319ckj30r205g0t6.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+于是注册一个用户名为 1 的账户&lt;br&gt;
+&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3yn4ubfxcj30cg04dglq.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+注册失败了，用户名不够长，那就注册一个 00001 进行尝试&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3yn5hmnsgj31hc0u07bj.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+登录抓包，用 vid 替换 userid 的值，vid_ckMd5 替换 userid_ckMd5 的值&lt;br&gt;
+成功登录管理员账户&lt;br&gt;
+&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3yn5somwzj30qq0fv767.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ F12 查看 cookie，修改 DedeUserID 和 DedeUserID__ckMd5 的值，与 vid 对应&lt;br&gt;
+&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3yn6ha50sj30r30a7myf.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+返回网站首页，这时登录页面也变成了管理员账户，至此完成越权&lt;/p&gt;
+</content>
+        <category term="渗透" />
+        <category term="Web" />
+        <updated>2022-07-06T11:41:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://meviv.github.io/2022/06/16/CTF/ctfworld/</id>
+        <title>攻防世界web区WP</title>
+        <link rel="alternate" href="http://meviv.github.io/2022/06/16/CTF/ctfworld/"/>
+        <content type="html">&lt;p&gt;水文&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;先水几篇文&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;view_source&lt;br&gt;
+ 题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3x9grids1j30e00bljs6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get_post&lt;br&gt;
+ 就是提交 get 请求和 post 请求&lt;br&gt;
+如 123.123.123.123:8080/?a=1&lt;br&gt;
+post 请求建议用 HackBar 提交&lt;br&gt;
+得到 flag&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;robots&lt;br&gt;
+ 访问 robots.txt 文件得到提示&lt;br&gt;
+&lt;span class=&#34;label&#34;&gt; Disallow: f1ag_1s_h3re.php&lt;/span&gt;&lt;br&gt;
+ 再次访问 f1ag_1s_h3re.php 得到 flag&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;backup&lt;br&gt;
+ 备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak&lt;br&gt;
+ 访问这个文件会自动下载，删掉.bak 打开得到 flag&lt;br&gt;
+ (在 Linux 服务器换源时可备份服务器源)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cookie&lt;br&gt;
+ 访问 cookie.php 得到提示&lt;br&gt;
+&lt;span class=&#34;label&#34;&gt; See the http response&lt;/span&gt;&lt;br&gt;
+ 于是 F12 查看消息头得到 flag&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;disabled_button&lt;br&gt;
+F12 查看源码，然后编辑&lt;br&gt;
+将 disabled 中的 dis 删去，就可以按了&lt;br&gt;
+得到 flag&lt;br&gt;
+&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3xas8l1lkj31hc0lxjwd.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;weak_auth&lt;br&gt;
+ 登录抓包对 password 进行爆破&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeiw6c0rj30yw0gcn16.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeo5b77rj310p0rin4w.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+得到密码 123456&lt;br&gt;
+ 输入后再次登录得到 flag&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;simple_php&lt;br&gt;
+php 中有两种比较符号&lt;br&gt;
+ === 会同时比较字符串的值和类型&lt;br&gt;
+ == 会先将字符串换成相同类型，再作比较，属于弱类型比较&lt;br&gt;
+通过 get 传参绕过验证即可，如 index.php?a=abc&amp;amp;b=1239a&lt;br&gt;
+ 得到 flag&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="CTF" />
+        <category term="Web" />
+        <updated>2022-06-16T07:20:17.000Z</updated>
+    </entry>
+</feed>
