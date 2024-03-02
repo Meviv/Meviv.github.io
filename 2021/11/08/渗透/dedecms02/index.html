@@ -27,12 +27,12 @@
   <meta name="keywords" content="渗透,Web" />
 
 
-<link rel="canonical" href="http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/">
+<link rel="canonical" href="http://meviv.github.io/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/">
 
 
 
   <title>
-织梦系统渗透测试壹 - 渗透 |
+织梦系统渗透测试贰 - 渗透 |
 Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,16 +60,16 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">织梦系统渗透测试壹
+  <h1 itemprop="name headline">织梦系统渗透测试贰
   </h1>
   
 <div class="meta">
-  <span class="item" title="創建時間：2022-07-06 19:41:29">
+  <span class="item" title="創建時間：2021-11-08 12:34:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">發表於</span>
-    <time itemprop="dateCreated datePublished" datetime="2022-07-06T19:41:29+08:00">2022-07-06</time>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-08T12:34:00+08:00">2021-11-08</time>
   </span>
 </div>
 
@@ -101,7 +101,7 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://tva4.sinaimg.cn/large/007dFS7lly8h447nal8dgj31hc0u0ai0.jpg">
+          <img src="https://s2.loli.net/2024/03/03/zoVclQ5h6wng1UT.png">
       </div>
     </header>
     <div id="waves">
@@ -131,7 +131,7 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-HK">
-  <link itemprop="mainEntityOfPage" href="http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/">
+  <link itemprop="mainEntityOfPage" href="http://meviv.github.io/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="//cdn.jsdelivr.net/gh/meviv/meviv.github.io@master/images/avatar.jpg">
@@ -146,31 +146,38 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>获得管理账户</p>
+    <p>写的依托…</p>
 <span id="more"></span>
-<h2 id="工具"><a class="markdownIt-Anchor" href="#工具">#</a> 工具</h2>
+<h1 id="工具"><a class="markdownIt-Anchor" href="#工具">#</a> 工具</h1>
 <p>Burpsuite</p>
-<h2 id="过程"><a class="markdownIt-Anchor" href="#过程">#</a> 过程</h2>
-<p>开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权<br>
-于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值<br>
-发包后直接返回了登录页面<br>
-<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2hx5wxj31hc0u044w.jpg" alt=""><br>
-<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2u7qszj30ra0bodhb.jpg" alt=""><br>
-就知道没这么简单<br>
-再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密<br>
-尝试了 b64 和一些加密方式后再进行 md5，还是没法对应<br>
-这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了<br>
-<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h3yn4319ckj30r205g0t6.jpg" alt=""><br>
-于是注册一个用户名为 1 的账户<br>
-<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h3yn4ubfxcj30cg04dglq.jpg" alt=""><br>
-注册失败了，用户名不够长，那就注册一个 00001 进行尝试<br>
-<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h3yn5hmnsgj31hc0u07bj.jpg" alt=""><br>
-登录抓包，用 vid 替换 userid 的值，vid_ckMd5 替换 userid_ckMd5 的值<br>
-成功登录管理员账户<br>
-<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h3yn5somwzj30qq0fv767.jpg" alt=""><br>
- F12 查看 cookie，修改 DedeUserID 和 DedeUserID__ckMd5 的值，与 vid 对应<br>
-<img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h3yn6ha50sj30r30a7myf.jpg" alt=""><br>
-返回网站首页，这时登录页面也变成了管理员账户，至此完成越权</p>
+<h1 id="过程"><a class="markdownIt-Anchor" href="#过程">#</a> 过程</h1>
+<p>前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试<br>
+想要登录网站后台光靠 cookie 是不行的，得有正经的密码<br>
+原来的思路是修改密码时抓包<br>
+但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置<br>
+通过几次抓包都没有有用信息，Forward 后就返回了，<br>
+得设置个安全问题才能继续，最后用无安全问题进入重置<br>
+<img data-src="https://s2.loli.net/2024/03/03/ZkhOqrm8sbtJwMW.png" alt=""><br>
+抓包，发到 repeater<br>
+<img data-src="https://s2.loli.net/2024/03/03/F7z5HyL3Wp4kVuU.png" alt=""><br>
+ 修改 id=1,userid=admin,safequestion=0.0, 发包<br>
+<img data-src="https://s2.loli.net/2024/03/03/MyaxXojbCuSUwDL.png" alt=""><br>
+得到一个网址，将 uploads 改为网站 ip<br>
+<img data-src="https://s2.loli.net/2024/03/03/X4xknFrBfzLNpu1.png" alt=""><br>
+ 访问失败，再次观察网址发现 get 请求有错，得把两个 amp; 删掉<br>
+<img data-src="https://s2.loli.net/2024/03/03/9trQalynS6igOEs.png" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/KU89mYZo4xrEetP.png" alt=""><br>
+成功进入并且修改管理账号密码<br>
+吊诡的是虽然显示修改成功但实际上密码还是错误 (为此我反复抓包修改搞了两个多小时)<br>
+ 最后发现退出 admin 后 cookie 就删了，得保持 admin 账号登录的情况下新建标签页重置密码<br>
+<img data-src="https://s2.loli.net/2024/03/03/alkiuRCtUNcQSp4.png" alt=""><br>
+再次抓包发到 repeater 并修改密码，修改后直接进入会员中心 - 系统设置<br>
+使用刚刚修改的密码重设<br>
+<img data-src="https://s2.loli.net/2024/03/03/loycBfXwOaLiWeA.png" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/lzRtkDLE8bGa9JB.png" alt=""><br>
+打开 dede，登录网站后台管理系统<br>
+<img data-src="https://s2.loli.net/2024/03/03/p32rNaHidjvunO6.png" alt=""><br>
+成功进入网站后台</p>
 
       <div class="tags">
           <a href="/tags/%E6%B8%97%E9%80%8F/" rel="tag"><i class="ic i-tag"></i> 渗透</a>
@@ -186,9 +193,9 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新於</span>
-    <time title="修改時間：2022-11-07 14:39:08" itemprop="dateModified" datetime="2022-11-07T14:39:08+08:00">2022-11-07</time>
+    <time title="修改時間：2024-03-03 03:10:18" itemprop="dateModified" datetime="2024-03-03T03:10:18+08:00">2024-03-03</time>
   </span>
-  <span id="2022/07/06/渗透/dedecms01/" class="item leancloud_visitors" data-flag-title="织梦系统渗透测试壹" title="閱讀次數">
+  <span id="2021/11/08/渗透/dedecms02/" class="item leancloud_visitors" data-flag-title="织梦系统渗透测试贰" title="閱讀次數">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -225,7 +232,7 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </li>
   <li class="link">
     <strong>文章連結：</strong>
-    <a href="http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" title="织梦系统渗透测试壹">http://meviv.github.io/2022/07/06/渗透/dedecms01/</a>
+    <a href="http://meviv.github.io/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/" title="织梦系统渗透测试贰">http://meviv.github.io/2021/11/08/渗透/dedecms02/</a>
   </li>
   <li class="license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
@@ -244,20 +251,20 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
     <div class="item left">
       
 
-  <a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;007dFS7lly8h447skk7juj31hc0u0n38.jpg" title="雜詩二">
+  <a href="/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2024&#x2F;03&#x2F;03&#x2F;W4pzuYGljekvbHK.png" title="织梦系统渗透测试壹">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> 杂谈</span>
-  <h3>雜詩二</h3>
+  <span class="category"><i class="ic i-flag"></i> 渗透</span>
+  <h3>织梦系统渗透测试壹</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007dFS7lly8h447p0cd9aj31mx0u0qe7.jpg" title="织梦系统渗透测试贰">
+  <a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2024&#x2F;03&#x2F;03&#x2F;mP1bS8VJZdsgQne.png" title="Vulnhub DC1">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 渗透</span>
-  <h3>织梦系统渗透测试贰</h3>
+  <h3>Vulnhub DC1</h3>
   </a>
 
     </div>
@@ -276,11 +283,11 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目錄">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text"> 工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 过程</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text"> 工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 过程</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" rel="bookmark" title="Vulnhub DC1">Vulnhub DC1</a></li><li class="active"><a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" rel="bookmark" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></li><li><a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="bookmark" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></li><li><a href="/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/" rel="bookmark" title="CS实现宏病毒植入">CS实现宏病毒植入</a></li><li><a href="/2022/11/05/%E6%B8%97%E9%80%8F/rearch/" rel="bookmark" title="渗透复现任务A">渗透复现任务A</a></li>
+          <li><a href="/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/" rel="bookmark" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></li><li class="active"><a href="/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="bookmark" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></li><li><a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" rel="bookmark" title="Vulnhub DC1">Vulnhub DC1</a></li><li><a href="/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/" rel="bookmark" title="CS实现宏病毒植入">CS实现宏病毒植入</a></li><li><a href="/2022/11/05/%E6%B8%97%E9%80%8F/rearch/" rel="bookmark" title="渗透课程复现任务">渗透课程复现任务</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="本站概覽">
@@ -358,12 +365,12 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -397,7 +404,7 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2022/07/06/渗透/dedecms01/',
+    path: '2021/11/08/渗透/dedecms02/',
     favicon: {
       show: "（●´3｀●）復活成功",
       hide: "(´Д｀)瀏覽器崩潰啦"

