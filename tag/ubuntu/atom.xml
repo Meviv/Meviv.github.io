@@ -8,8 +8,8 @@
     <category term="Python" />
     <category term="诗" />
     <category term="渗透" />
-    <category term="Java" />
     <category term="Web" />
+    <category term="Java" />
     <entry>
         <id>http://meviv.github.io/2022/07/30/qinlong/</id>
         <title>搭建青龙面板实现脚本可视化管理</title>
