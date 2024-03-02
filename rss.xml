@@ -7,12 +7,10 @@
         <language>zh-HK</language>
         <pubDate>Sat, 05 Nov 2022 15:16:53 +0800</pubDate>
         <lastBuildDate>Sat, 05 Nov 2022 15:16:53 +0800</lastBuildDate>
-        <category>Python</category>
         <category>Ubuntu</category>
         <category>诗</category>
-        <category>CTF</category>
+        <category>Python</category>
         <category>渗透</category>
-        <category>杂谈</category>
         <category>Java</category>
         <category>Web</category>
         <item>
@@ -145,20 +143,6 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker run -dit \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;config:&amp;#x2F;ql&amp;#x2F;config \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;log:&amp;#x2F;ql&amp;#x2F;log \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;scripts:&amp;#x2F;ql&amp;#x2F;scripts \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-v $PWD&amp;#x2F;ql2&amp;#x2F;db:&amp;#x2F;ql&amp;#x2F;db \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--name qinglong2 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--hostname qinglong2 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--restart always \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-p 5701:5700 \&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;whyour&amp;#x2F;qinglong:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/</guid>
-            <title>浅谈中国新闻周刊</title>
-            <link>http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/</link>
-            <category>杂谈</category>
-            <pubDate>Tue, 12 Jul 2022 15:08:26 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;做题家与骆驼祥子&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;h1 id=&#34;小镇做题家&#34;&gt;&lt;a href=&#34;#小镇做题家&#34; class=&#34;headerlink&#34; title=&#34;小镇做题家&#34;&gt;&lt;/a&gt;小镇做题家&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h4463mcti6j30tm0txafg.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;黄国平的致谢文&#34;&gt;&lt;a href=&#34;#黄国平的致谢文&#34; class=&#34;headerlink&#34; title=&#34;黄国平的致谢文&#34;&gt;&lt;/a&gt;黄国平的致谢文&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h4464wbkenj30qo0z843l.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;人民日报1976年刊文&#34;&gt;&lt;a href=&#34;#人民日报1976年刊文&#34; class=&#34;headerlink&#34; title=&#34;人民日报1976年刊文&#34;&gt;&lt;/a&gt;人民日报1976年刊文&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h446f9kzb6j30sn0jmgrf.jpg&#34;&gt;&lt;br&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h446fvbkl4j30pm05wtag.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;骆驼祥子&#34;&gt;&lt;a href=&#34;#骆驼祥子&#34; class=&#34;headerlink&#34; title=&#34;骆驼祥子&#34;&gt;&lt;/a&gt;骆驼祥子&lt;/h1&gt;&lt;p&gt;“他以为一直努力拉车，就会拥有属于自己的一辆黄包车”&lt;br&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h446k68holj30bi0fmweu.jpg&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/</guid>
             <title>织梦系统渗透测试贰</title>
             <link>http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/</link>
@@ -276,74 +260,6 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://meviv.github.io/2022/06/16/CTF/ctfworld/</guid>
-            <title>攻防世界web区WP</title>
-            <link>http://meviv.github.io/2022/06/16/CTF/ctfworld/</link>
-            <category>CTF</category>
-            <category>Web</category>
-            <pubDate>Thu, 16 Jun 2022 15:20:17 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;水文&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;p&gt;先水几篇文&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;view_source&lt;br&gt;
- 题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3x9grids1j30e00bljs6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;get_post&lt;br&gt;
- 就是提交 get 请求和 post 请求&lt;br&gt;
-如 123.123.123.123:8080/?a=1&lt;br&gt;
-post 请求建议用 HackBar 提交&lt;br&gt;
-得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;robots&lt;br&gt;
- 访问 robots.txt 文件得到提示&lt;br&gt;
-&lt;span class=&#34;label&#34;&gt; Disallow: f1ag_1s_h3re.php&lt;/span&gt;&lt;br&gt;
- 再次访问 f1ag_1s_h3re.php 得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;backup&lt;br&gt;
- 备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak&lt;br&gt;
- 访问这个文件会自动下载，删掉.bak 打开得到 flag&lt;br&gt;
- (在 Linux 服务器换源时可备份服务器源)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;cookie&lt;br&gt;
- 访问 cookie.php 得到提示&lt;br&gt;
-&lt;span class=&#34;label&#34;&gt; See the http response&lt;/span&gt;&lt;br&gt;
- 于是 F12 查看消息头得到 flag&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;disabled_button&lt;br&gt;
-F12 查看源码，然后编辑&lt;br&gt;
-将 disabled 中的 dis 删去，就可以按了&lt;br&gt;
-得到 flag&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3xas8l1lkj31hc0lxjwd.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;weak_auth&lt;br&gt;
- 登录抓包对 password 进行爆破&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeiw6c0rj30yw0gcn16.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeo5b77rj310p0rin4w.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-得到密码 123456&lt;br&gt;
- 输入后再次登录得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;simple_php&lt;br&gt;
-php 中有两种比较符号&lt;br&gt;
- === 会同时比较字符串的值和类型&lt;br&gt;
- == 会先将字符串换成相同类型，再作比较，属于弱类型比较&lt;br&gt;
-通过 get 传参绕过验证即可，如 index.php?a=abc&amp;amp;b=1239a&lt;br&gt;
- 得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/</guid>
             <title>杂詩一</title>
             <link>http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/</link>
@@ -364,8 +280,8 @@ php 中有两种比较符号&lt;br&gt;
             <guid isPermalink="true">http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/</guid>
             <title>ubuntu系统配置python</title>
             <link>http://meviv.github.io/2022/06/04/Python/ubuntu%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AEpython/</link>
-            <category>Python</category>
             <category>Ubuntu</category>
+            <category>Python</category>
             <pubDate>Sat, 04 Jun 2022 13:41:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;为 ubuntu 服务器配置 py 环境用于运行代码.&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;

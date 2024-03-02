@@ -4,12 +4,10 @@
     <title></title>
     <link href="http://meviv.github.io" />
     <updated>2022-11-05T07:16:53.000Z</updated>
-    <category term="Python" />
     <category term="Ubuntu" />
     <category term="诗" />
-    <category term="CTF" />
+    <category term="Python" />
     <category term="渗透" />
-    <category term="杂谈" />
     <category term="Java" />
     <category term="Web" />
     <entry>
@@ -142,20 +140,6 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
         <updated>2022-07-30T10:25:53.000Z</updated>
     </entry>
     <entry>
-        <id>http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/</id>
-        <title>浅谈中国新闻周刊</title>
-        <link rel="alternate" href="http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/"/>
-        <content type="html">&lt;p&gt;做题家与骆驼祥子&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;h1 id=&#34;小镇做题家&#34;&gt;&lt;a href=&#34;#小镇做题家&#34; class=&#34;headerlink&#34; title=&#34;小镇做题家&#34;&gt;&lt;/a&gt;小镇做题家&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h4463mcti6j30tm0txafg.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;黄国平的致谢文&#34;&gt;&lt;a href=&#34;#黄国平的致谢文&#34; class=&#34;headerlink&#34; title=&#34;黄国平的致谢文&#34;&gt;&lt;/a&gt;黄国平的致谢文&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h4464wbkenj30qo0z843l.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;人民日报1976年刊文&#34;&gt;&lt;a href=&#34;#人民日报1976年刊文&#34; class=&#34;headerlink&#34; title=&#34;人民日报1976年刊文&#34;&gt;&lt;/a&gt;人民日报1976年刊文&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h446f9kzb6j30sn0jmgrf.jpg&#34;&gt;&lt;br&gt;&lt;img data-src=&#34;https://tva1.sinaimg.cn/large/007dFS7lly8h446fvbkl4j30pm05wtag.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;骆驼祥子&#34;&gt;&lt;a href=&#34;#骆驼祥子&#34; class=&#34;headerlink&#34; title=&#34;骆驼祥子&#34;&gt;&lt;/a&gt;骆驼祥子&lt;/h1&gt;&lt;p&gt;“他以为一直努力拉车，就会拥有属于自己的一辆黄包车”&lt;br&gt;&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h446k68holj30bi0fmweu.jpg&#34;&gt;&lt;/p&gt;
-</content>
-        <category term="杂谈" />
-        <updated>2022-07-12T07:08:26.000Z</updated>
-    </entry>
-    <entry>
         <id>http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/</id>
         <title>织梦系统渗透测试贰</title>
         <link rel="alternate" href="http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/"/>
@@ -273,74 +257,6 @@ Done 表示脚本执行完成，打开靶机发现计算器已弹出&lt;br&gt;
         <updated>2022-06-20T08:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://meviv.github.io/2022/06/16/CTF/ctfworld/</id>
-        <title>攻防世界web区WP</title>
-        <link rel="alternate" href="http://meviv.github.io/2022/06/16/CTF/ctfworld/"/>
-        <content type="html">&lt;p&gt;水文&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;p&gt;先水几篇文&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;view_source&lt;br&gt;
- 题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3x9grids1j30e00bljs6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;get_post&lt;br&gt;
- 就是提交 get 请求和 post 请求&lt;br&gt;
-如 123.123.123.123:8080/?a=1&lt;br&gt;
-post 请求建议用 HackBar 提交&lt;br&gt;
-得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;robots&lt;br&gt;
- 访问 robots.txt 文件得到提示&lt;br&gt;
-&lt;span class=&#34;label&#34;&gt; Disallow: f1ag_1s_h3re.php&lt;/span&gt;&lt;br&gt;
- 再次访问 f1ag_1s_h3re.php 得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;backup&lt;br&gt;
- 备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak&lt;br&gt;
- 访问这个文件会自动下载，删掉.bak 打开得到 flag&lt;br&gt;
- (在 Linux 服务器换源时可备份服务器源)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;cookie&lt;br&gt;
- 访问 cookie.php 得到提示&lt;br&gt;
-&lt;span class=&#34;label&#34;&gt; See the http response&lt;/span&gt;&lt;br&gt;
- 于是 F12 查看消息头得到 flag&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;disabled_button&lt;br&gt;
-F12 查看源码，然后编辑&lt;br&gt;
-将 disabled 中的 dis 删去，就可以按了&lt;br&gt;
-得到 flag&lt;br&gt;
-&lt;img data-src=&#34;https://tva2.sinaimg.cn/large/007dFS7lly8h3xas8l1lkj31hc0lxjwd.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;weak_auth&lt;br&gt;
- 登录抓包对 password 进行爆破&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeiw6c0rj30yw0gcn16.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://tva4.sinaimg.cn/large/007dFS7lly8h3xeo5b77rj310p0rin4w.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-得到密码 123456&lt;br&gt;
- 输入后再次登录得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;simple_php&lt;br&gt;
-php 中有两种比较符号&lt;br&gt;
- === 会同时比较字符串的值和类型&lt;br&gt;
- == 会先将字符串换成相同类型，再作比较，属于弱类型比较&lt;br&gt;
-通过 get 传参绕过验证即可，如 index.php?a=abc&amp;amp;b=1239a&lt;br&gt;
- 得到 flag&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="CTF" />
-        <category term="Web" />
-        <updated>2022-06-16T07:20:17.000Z</updated>
-    </entry>
-    <entry>
         <id>http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/</id>
         <title>杂詩一</title>
         <link rel="alternate" href="http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/"/>
@@ -372,8 +288,8 @@ php 中有两种比较符号&lt;br&gt;
 &lt;p&gt;通过此种方法配置的 Python 会缺少 pip 包，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=&#34;&gt;需要 wegt 装载 get-pip.py&lt;/span&gt;.&lt;br&gt;
  再次运行即可&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;wget https:&amp;#x2F;&amp;#x2F;bootstrap.pypa.io&amp;#x2F;get-pip.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;python3.10 get-pip.py&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="Python" />
         <category term="Ubuntu" />
+        <category term="Python" />
         <updated>2022-06-04T05:41:40.000Z</updated>
     </entry>
     <entry>

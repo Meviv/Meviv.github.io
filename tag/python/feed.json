@@ -22,8 +22,8 @@
             "date_published": "2022-06-04T05:41:40.000Z",
             "content_html": "<p>为 ubuntu 服务器配置 py 环境用于运行代码.</p>\n<span id=\"more\"></span>\n<h1 id=\"环境配置\"><a class=\"markdownIt-Anchor\" href=\"#环境配置\">#</a> 环境配置</h1>\n<p>为 ubuntu 服务器配置 py 环境用于运行代码.<br>\n 所用系统镜像为 Ubuntu20.04</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>sudo apt install python3.10-dev</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>sudo apt install python3.10-distutils</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>sudo apt install python3.10-venv</pre></td></tr></table></figure><div class=\"note warning\">\n<p>注意</p>\n</div>\n<p>通过此种方法配置的 Python 会缺少 pip 包，<span class=\"exturl\" data-url=\"aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=\">需要 wegt 装载 get-pip.py</span>.<br>\n 再次运行即可</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>python3.10 get-pip.py</pre></td></tr></table></figure>",
             "tags": [
-                "Python",
-                "Ubuntu"
+                "Ubuntu",
+                "Python"
             ]
         }
     ]

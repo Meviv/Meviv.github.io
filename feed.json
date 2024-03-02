@@ -37,16 +37,6 @@
             ]
         },
         {
-            "id": "http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/",
-            "url": "http://meviv.github.io/2022/07/12/%E6%9D%82%E8%B0%88/talk01/",
-            "title": "浅谈中国新闻周刊",
-            "date_published": "2022-07-12T07:08:26.000Z",
-            "content_html": "<p>做题家与骆驼祥子</p>\n<span id=\"more\"></span>\n<h1 id=\"小镇做题家\"><a href=\"#小镇做题家\" class=\"headerlink\" title=\"小镇做题家\"></a>小镇做题家</h1><p><img data-src=\"https://tva2.sinaimg.cn/large/007dFS7lly8h4463mcti6j30tm0txafg.jpg\"></p>\n<h1 id=\"黄国平的致谢文\"><a href=\"#黄国平的致谢文\" class=\"headerlink\" title=\"黄国平的致谢文\"></a>黄国平的致谢文</h1><p><img data-src=\"https://tva1.sinaimg.cn/large/007dFS7lly8h4464wbkenj30qo0z843l.jpg\"></p>\n<h1 id=\"人民日报1976年刊文\"><a href=\"#人民日报1976年刊文\" class=\"headerlink\" title=\"人民日报1976年刊文\"></a>人民日报1976年刊文</h1><p><img data-src=\"https://tva1.sinaimg.cn/large/007dFS7lly8h446f9kzb6j30sn0jmgrf.jpg\"><br><img data-src=\"https://tva1.sinaimg.cn/large/007dFS7lly8h446fvbkl4j30pm05wtag.jpg\"></p>\n<h1 id=\"骆驼祥子\"><a href=\"#骆驼祥子\" class=\"headerlink\" title=\"骆驼祥子\"></a>骆驼祥子</h1><p>“他以为一直努力拉车，就会拥有属于自己的一辆黄包车”<br><img data-src=\"https://tva4.sinaimg.cn/large/007dFS7lly8h446k68holj30bi0fmweu.jpg\"></p>\n",
-            "tags": [
-                "杂谈"
-            ]
-        },
-        {
             "id": "http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/",
             "url": "http://meviv.github.io/2022/07/08/%E6%B8%97%E9%80%8F/dedecms02/",
             "title": "织梦系统渗透测试贰",
@@ -79,17 +69,6 @@
             ]
         },
         {
-            "id": "http://meviv.github.io/2022/06/16/CTF/ctfworld/",
-            "url": "http://meviv.github.io/2022/06/16/CTF/ctfworld/",
-            "title": "攻防世界web区WP",
-            "date_published": "2022-06-16T07:20:17.000Z",
-            "content_html": "<p>水文</p>\n<span id=\"more\"></span>\n<p>先水几篇文</p>\n<ul>\n<li>\n<p>view_source<br>\n 题目提示鼠标右键无法使用， Ctrl+U 显示源码，或直接 F12<br>\n<img data-src=\"https://tva2.sinaimg.cn/large/007dFS7lly8h3x9grids1j30e00bljs6.jpg\" alt=\"\"></p>\n</li>\n<li>\n<p>get_post<br>\n 就是提交 get 请求和 post 请求<br>\n如 123.123.123.123:8080/?a=1<br>\npost 请求建议用 HackBar 提交<br>\n得到 flag</p>\n</li>\n<li>\n<p>robots<br>\n 访问 robots.txt 文件得到提示<br>\n<span class=\"label\"> Disallow: f1ag_1s_h3re.php</span><br>\n 再次访问 f1ag_1s_h3re.php 得到 flag</p>\n</li>\n<li>\n<p>backup<br>\n 备份文件后缀名一般是 bak，index.php 的备份就是 index.php.bak<br>\n 访问这个文件会自动下载，删掉.bak 打开得到 flag<br>\n (在 Linux 服务器换源时可备份服务器源)</p>\n</li>\n<li>\n<p>cookie<br>\n 访问 cookie.php 得到提示<br>\n<span class=\"label\"> See the http response</span><br>\n 于是 F12 查看消息头得到 flag<br>\n<img data-src=\"https://tva4.sinaimg.cn/large/007dFS7lly8h3xa5o5koij30fc0afwg3.jpg\" alt=\"\"></p>\n</li>\n<li>\n<p>disabled_button<br>\nF12 查看源码，然后编辑<br>\n将 disabled 中的 dis 删去，就可以按了<br>\n得到 flag<br>\n<img data-src=\"https://tva2.sinaimg.cn/large/007dFS7lly8h3xas8l1lkj31hc0lxjwd.jpg\" alt=\"\"></p>\n</li>\n<li>\n<p>weak_auth<br>\n 登录抓包对 password 进行爆破<br>\n<img data-src=\"https://tva4.sinaimg.cn/large/007dFS7lly8h3xeiw6c0rj30yw0gcn16.jpg\" alt=\"\"><br>\n<img data-src=\"https://tva4.sinaimg.cn/large/007dFS7lly8h3xeo5b77rj310p0rin4w.jpg\" alt=\"\"><br>\n得到密码 123456<br>\n 输入后再次登录得到 flag</p>\n</li>\n<li>\n<p>simple_php<br>\nphp 中有两种比较符号<br>\n === 会同时比较字符串的值和类型<br>\n == 会先将字符串换成相同类型，再作比较，属于弱类型比较<br>\n通过 get 传参绕过验证即可，如 index.php?a=abc&amp;b=1239a<br>\n 得到 flag</p>\n</li>\n</ul>\n",
-            "tags": [
-                "CTF",
-                "Web"
-            ]
-        },
-        {
             "id": "http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/",
             "url": "http://meviv.github.io/2022/06/14/%E6%9D%82%E8%B0%88/%E6%9D%82%E8%A9%A9%E4%B8%80/",
             "title": "杂詩一",
@@ -106,8 +85,8 @@
             "date_published": "2022-06-04T05:41:40.000Z",
             "content_html": "<p>为 ubuntu 服务器配置 py 环境用于运行代码.</p>\n<span id=\"more\"></span>\n<h1 id=\"环境配置\"><a class=\"markdownIt-Anchor\" href=\"#环境配置\">#</a> 环境配置</h1>\n<p>为 ubuntu 服务器配置 py 环境用于运行代码.<br>\n 所用系统镜像为 Ubuntu20.04</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>sudo apt install python3.10-dev</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>sudo apt install python3.10-distutils</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>sudo apt install python3.10-venv</pre></td></tr></table></figure><div class=\"note warning\">\n<p>注意</p>\n</div>\n<p>通过此种方法配置的 Python 会缺少 pip 包，<span class=\"exturl\" data-url=\"aHR0cDovL3huLS13ZWd0Z2V0LXBpcC15ejU1YXl6ZTc4OGE3eHoucHk=\">需要 wegt 装载 get-pip.py</span>.<br>\n 再次运行即可</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>python3.10 get-pip.py</pre></td></tr></table></figure>",
             "tags": [
-                "Python",
-                "Ubuntu"
+                "Ubuntu",
+                "Python"
             ]
         },
         {
