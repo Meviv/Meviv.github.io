@@ -8,8 +8,8 @@
     <category term="Python" />
     <category term="诗" />
     <category term="渗透" />
-    <category term="Web" />
     <category term="Java" />
+    <category term="Web" />
     <entry>
         <id>http://meviv.github.io/2022/09/18/%E6%B8%97%E9%80%8F/cobalt/</id>
         <title>CS实现宏病毒植入</title>
